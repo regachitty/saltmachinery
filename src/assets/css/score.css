@@ -1,0 +1,49 @@
+/* .score-color{
+    color: #151515;
+}
+
+@media (max-width: 576px) {  
+    .score-style {  
+      font-size: 0.4rem;  
+    }  
+    .score-color {  
+      margin: 0;  
+      padding: 0;  
+    }  
+    .score-text{
+        font-size: 0.4rem;
+    }
+    
+   }  
+   */
+   .score-color {
+    color: #151515;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .score-style {
+    font-size: 3rem; /* Default font size for larger screens */
+    font-weight: bold;
+  }
+  
+  .score-text {
+    font-size: 1.2rem; /* Default font size for descriptions */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (max-width: 576px) {
+    .score-style {
+      font-size: 30px !important; /* Reduced font size for smaller screens */
+    }
+    .score-text {
+      font-size: 0.4rem; /* Adjusted for readability */
+    }
+    .score-color {
+      margin: 0; /* Ensure no extra space */
+      padding: 0; /* Reset padding */
+    }
+  }
+  

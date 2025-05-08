@@ -1,0 +1,134 @@
+
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column; 
+}
+
+.over-flow-hidden{
+  overflow: hidden!important;
+} 
+.bg-color {
+  background-color: #94acd2 !important;
+}
+
+.get-touch-btn{
+  border-radius:23px; 
+  background-color: #fff;
+  color: #444B59;
+  border: 0px solid #fff!important;
+  font-size: 15px;
+}
+
+.contact-call a.callStyle {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.language-dd {
+  border-radius: 23px;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #444b59;
+  border: 1px solid #fff !important;
+  font-size: 15px;
+}
+
+.india-flag-icon-style {
+  width: 23px !important;
+}
+
+.navbar-toggler{
+  border-radius: 25px !important;
+  border: 1px solid #ebe7e7 !important;
+  background-color: #fff !important;
+  z-index: 1;
+  margin: 10px!important;
+  color: white !important;
+}
+ 
+.navbar-toggler-icon {
+  color: black !important;
+  width: 23px !important;
+}
+
+@media(max-width:1100px) {
+  .nav-img2 img{
+    width: 100px!important;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .navbar-toggler-icon {
+    color: black !important;
+    width: 18px !important;
+  }
+  .get-touch-btn {
+    margin-top: 10px;
+  }
+
+  .contact-call {
+    margin-bottom: 10px;
+  }
+  .navbar-brand img{
+    width:130px;
+    height: auto;
+    display: flex;
+    padding: auto;
+  }
+ .nav-img2{
+  display: none !important;
+ }
+}
+
+
+@media (min-width: 993px) {
+  .nav-img{
+display: none;
+  }
+}
+
+.product-text-style{
+ color: white !important;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+
+.dropdown-menu-custom {
+  min-width: 150px;
+  color: #547AB7 !important; 
+  border-radius: 5px;
+  text-decoration: none;
+}
+.dropdown-menu-custom .ant-dropdown-menu {
+  margin-top: 8px; 
+}
+.menu-text-style{
+  color: #547AB7 !important;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+.menu-text-style:hover{
+  color: black !important; 
+  font-weight:500;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+

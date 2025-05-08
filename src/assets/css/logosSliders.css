@@ -1,0 +1,160 @@
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+    padding: 10px;
+    position: relative; /* Ensure arrows stay fixed */
+    overflow: hidden; /* Prevents unwanted scrolling */
+}
+
+/* Ensure only images move, not the arrows */
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 150px !important; /* More space between images */
+    transition: transform 0.5s ease-in-out;
+    flex-wrap: nowrap; /* Prevents items from wrapping */
+    overflow: hidden; /* Prevents extra images from showing */
+    max-width: 90%;
+}
+
+/* Logo Container */
+.logo-container {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+/* Responsive Image */
+.logo-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Arrows */
+.arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    position: absolute; /* Keep arrows fixed */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+
+.left-arrow {
+    left: 600px !important;
+}
+
+.right-arrow {
+    right: 600px !important;
+}
+
+.arrow img {
+    width: 9px;
+    height: 35px;
+}
+
+
+
+/* Responsive Adjustments */
+@media (min-width: 1200px) and (max-width:2000px){
+    .logo-wrapper {
+        max-width: 85%;
+        gap: 70px;
+    }
+    .left-arrow {
+        left: 150px !important;
+    }
+    .right-arrow {
+        right: 150px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .logo-wrapper {
+        max-width: 80%;
+        gap: 60px !important;
+    }
+    .left-arrow {
+        left: 60px !important;
+    }
+    .right-arrow {
+        right: 60px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .logo-wrapper {
+        max-width: 75%;
+        gap: 50px !important;
+    }
+    .left-arrow {
+        left: 50px !important;
+    }
+    .right-arrow {
+        right: 50px !important;
+    }
+    .arrow img {
+        width: 10px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .logo-wrapper {
+        max-width: 70%;
+        gap: 40px !important;
+    }
+    .left-arrow {
+        left: 50px !important;
+    }
+    .right-arrow {
+        right: 50px !important;
+    }
+    .arrow img {
+        width: 11px;
+        height: 28px;
+    }
+}
+
+@media (min-width:375px) and (max-width: 575px) {
+    .logo-wrapper {
+        max-width: 65%;
+        gap: 30px !important;
+    }
+    .left-arrow {
+        left: 50px !important;
+    }
+    .right-arrow {
+        right: 50px !important;
+    }
+    .arrow img {
+        width: 10px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo-wrapper {
+        max-width: 60%;
+        gap: 20px !important;
+    }
+    .left-arrow {
+        left: 30px !important;
+    }
+    .right-arrow {
+        right: 30px !important;
+    }
+    .arrow img {
+        width: 9px;
+        height: 20px;
+    }
+}
+ 

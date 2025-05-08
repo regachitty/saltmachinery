@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,700;1,9..40,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital@0;1&display=swap");
+
+/* background-color */
+.background-cl {
+  background-color: #94ACD2 !important;
+
+}
+
+.pageTextcolor {
+  color: 153443;
+}
+
+.text-color-bg {
+  color: #94ACD2 !important;
+}
+
+/* font-color and bg-color */
+.text-white {
+  color: #FFFFFF;
+}
+
+.text-half-white {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.text-black-heading {
+  color: rgba(21, 52, 67, 0.66);
+}
+
+.text-black-subheading {
+  color: rgba(21, 52, 67, 0.8);
+}
+
+.bg-back-color {
+  background-color: rgba(21, 52, 67, 0.8);
+}
+
+.card-text-heading-cl {
+  color: #170F49;
+}
+
+.card-sub-heading-cl {
+  color: #6F6C90;
+}
+
+/* ----end----- */
+
+.albert-sans {
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.albert-sans-400 {
+
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.dm-sans-400 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fs-30 {
+  font-size: 30px;
+}
+
+.fs-50 {
+  font-size: 50px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.over-flow-hidden-style {
+  overflow: hidden !important;
+}
+
+.over-flow-x {
+  overflow-x: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.border-left {
+  border-left: 1px solid #ffffff8a;
+}
+
+.border-right {
+  border-right: 1px solid #ffffff8a;
+}
+
+.border-top {
+  border-top: 1px solid #ffffff3b;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ffffff3b;
+}
+
+/* media */
+@media (max-width: 767px) {
+  .fs-md-24 {
+    font-size: 24px;
+  }
+}
+
+
+

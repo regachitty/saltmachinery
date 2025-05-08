@@ -1,0 +1,38 @@
+.background-color {
+  background-image: linear-gradient(#94acd2, #2e5aa0);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner-text-style {
+  font-size: 50px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .banner-text-style {
+    font-size: 50px;
+  }
+  .video-container-file video {
+    height: 300px; /* Smaller height for mobile */
+  }
+}
+@media (min-width:320px) and (max-width:767px) {
+    .banner-text-style {
+        font-size: 30px;
+      } 
+}
+
+
+.video-container-file {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+

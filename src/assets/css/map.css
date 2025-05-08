@@ -1,0 +1,131 @@
+/* Map Page Container */
+.map-page-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Map Container */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* SVG Map */
+.svg-map {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff; /* White background for the map */
+}
+
+/* Tag Container (for pins) */
+.tag-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure pins don't interfere with map interactions */
+}
+
+/* Individual Pin Box */
+.tag-box {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  pointer-events: auto; /* Enable hover interactions for pins */
+}
+
+/* Pin Label (icon + country name) */
+.pin-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Location Icon */
+.bi-geo-alt-fill {
+  font-size: 1.5rem; /* Default icon size */
+  color: #0119FF; /* Red color for the icon */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect on location icon */
+.tag-box:hover .bi-geo-alt-fill {
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+/* Country Name Label */
+.country-name-label {
+  font-size: 0.875rem; /* Default text size */
+  font-weight: bold;
+  color: #000000; /* Black color for the text */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  display: none; /* Hide country name by default */
+}
+
+/* Show country name on hover */
+.tag-box:hover .country-name-label {
+  display: block; /* Show country name on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .bi-geo-alt-fill {
+    font-size: 1rem; /* Smaller icon on mobile */
+  }
+
+  .country-name-label {
+    font-size: 0.75rem; /* Smaller text on mobile */
+    padding: 2px 6px;
+  }
+}
+
+/* Hide pins in mobile view */
+@media (max-width: 768px) {
+  .tag-container {
+    display: none;
+  }
+}
+
+/* Map Heading Text */
+.map-head-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #001c48; /* Dark blue color for the heading */
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Container Adjustments */
+@media (max-width: 768px) {
+  .map-head-text {
+    font-size: 1.5rem; /* Smaller heading on mobile */
+  }
+  .grid {
+    gap: 1rem !important;
+    flex: none !important;
+    position: relative !important;
+    width: 351vw !important;
+    height: 111vh !important;
+    display: grid !important;
+    grid-template-rows: repeat(5, 1fr) !important;
+    grid-template-columns: 93% !important;
+    transform: rotate(var(--angle)) !important;
+    transform-origin: center center !important;
+}
+  .map-page-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}

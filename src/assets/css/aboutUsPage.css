@@ -1,0 +1,299 @@
+.content{
+  margin-top: 100vh;
+  z-index: 10;
+  position: relative;
+  background-color: white;
+}
+.salt-process-para-text{
+  color: rgba(21, 52, 67, 0.8);
+  font-size: 18px;
+  max-width: 75%;
+}
+.emp-text-style{
+  color:#153443;
+  font-size: 16px;
+  font-weight: 500; 
+ 
+}
+.ourstreng-style{
+ font-size: 60px;
+ color: #153443;
+}
+.strength-para-style {
+  max-width: 75%; 
+}
+.saltour-vision-style{
+  color: #153443;
+  font-size: 60px;
+  max-width:80%;
+}
+.strength-para-style{
+  color: rgba(21, 52, 67, 0.8);
+}
+.abt-explore{
+  font-size: 16px;
+  color:rgba(21, 52, 67, 0.8) ;
+}
+.abt-joinstyle{
+  font-size: 60px ;
+
+}
+.abt-para-styles{
+  font-size: 18px;
+  color:rgba(21, 52, 67, 0.8) ;
+}
+.runing-text {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.runing-text-style {
+  display: inline-block;
+  animation: slideInRightToLeft 10s linear infinite;
+  white-space: nowrap;
+  padding: 10px;
+  font-size: 200px;
+  color: #153443; 
+}
+
+.runing-text-style.transparent {
+  color: transparent !important;
+  -webkit-text-stroke: 2px hsla(200, 52%, 17%, 0.18) !important; 
+}
+.ourValue-styles{
+  color: #153443;
+  font-size: 50px;
+}
+.value-title{
+  font-size: 22px;
+}
+@keyframes slideInRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.aboutus-para-style{
+  color: rgba(21, 52, 67, 0.8);
+  width:60%;
+  font-size: 20px;
+}
+.vl {
+  border-left: 1px solid hsla(200, 52%, 17%, 0.18);
+  height: 150px;
+}
+
+.aboutUs-paragraph-style{
+  color: #153443 !important;
+  line-height: 2.2;
+  max-width: 75%;
+  font-size: 18px;
+}
+.teamparastyles{
+  font-size: 18px;
+  width: 75%;
+  color: #52525B;
+}
+.ourteam-style{
+  font-size: 50px;
+}
+.value-description{
+ font-size: 16px;
+}
+.trust-text{
+  color: #153443;
+  font-size: 50px;
+}
+.trust-text-styles{
+  font-size:18px!important;
+  color: #667085;
+}
+@media (min-width:320px) and (max-width:768px) {
+  .salt-process-para-text{
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .emp-text-style{
+    font-size: 16px;
+  }
+  .ourstreng-style{
+   font-size: 30px;
+  }
+  .saltour-vision-style{
+    font-size: 30px;
+    max-width:100%;
+  }
+  .strength-para-style {
+    max-width: 100%; 
+  }
+  .runing-text-style {
+      font-size: 90px !important;
+  }
+  .aboutus-para-style{
+      width:100%;
+      font-size: 16px;
+      text-align: center;
+    }
+    .teamparastyles{
+      font-size: 12px;
+      width: 100%;
+    }
+    .ourValue-styles{
+      font-size: 30px;
+    }
+    .ourteam-style{
+      font-size: 30px;
+    }
+.value-title{
+  font-size: 16px;
+}
+.value-description{
+  font-size: 12px;
+ }
+ .trust-text{
+  font-size: 30px !important;
+}
+.trust-text-styles{
+  font-size:12px!important;
+}
+.abt-explore{
+  font-size: 16px !important;
+
+}
+.abt-joinstyle{
+  font-size: 35px !important;
+}
+.abt-para-styles{
+  font-size: 16px !important;
+}
+.aboutUs-paragraph-style{
+  max-width: 100%;
+  font-size: 16px;
+  padding: 16px;
+}
+}
+/* Ensure the main container does not overflow horizontally */
+.about-us-container {
+  overflow-x: hidden;
+}
+
+/* Ensure all child elements do not cause horizontal overflow */
+.about-us-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .salt-process-para-text{
+    font-size: 18px;
+    max-width: 85%;
+  }
+  .emp-text-style{
+    font-size: 16px;
+  }
+  .strength-para-style {
+    max-width: 60%; 
+  }
+  .saltour-vision-style{
+    font-size: 50px;
+    max-width:60%;
+  }
+  .ourstreng-style{
+   font-size: 20px;
+  }
+  .running-text {
+      font-size: 150px !important;
+  }
+  .teamparastyles{
+    font-size: 16px;
+    width: 100%;
+  }
+  .ourteam-style{
+    font-size: 40px;
+  }
+  .ourValue-styles{
+    font-size: 40px;
+  }
+  .value-title{
+    font-size: 18px;
+  }
+  .trust-text{
+    font-size: 40px !important;
+  }
+  .trust-text-styles{
+    font-size:15px!important;
+  }
+ 
+  .image-container img {
+      margin: 0 auto;
+      display: block; 
+  }
+  .image-container {
+      justify-content: center !important; 
+      align-items: center !important;
+  }
+  .value-description{
+    font-size: 15px;
+   }
+   .abt-joinstyle{
+    font-size: 40px !important;
+  }
+
+hr {
+  width: 97%;
+  margin: 0 auto;
+} 
+@media (max-width: 768px) {
+  .vertical-lines{
+    display: none;
+  }
+  hr{
+    display: none;
+  }
+
+}
+
+.vertical-lines {
+  width: 1px; 
+  height: 110px; 
+  background-color: rgba(21, 52, 67, 0.18); 
+}
+
+}
+
+
+
+.value-card {
+position: relative;
+padding-right: 20px; 
+}
+
+@media (min-width: 992px) { 
+.value-card:not(.no-border)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #ccc; 
+}
+
+.value-card {
+  padding-right: 10px;
+}
+.emp-text-style{
+  font-size: 16px;
+}
+.ourstreng-style{
+ font-size: 60px;
+}
+}
+
+
+
+
+

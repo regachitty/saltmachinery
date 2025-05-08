@@ -1,0 +1,18 @@
+.team.card{
+    border: none;  
+  }
+  .card-body{
+      padding: 0;
+  }
+  .ourteam-title{
+      color:#101828;
+      font-size: 20px;
+  }
+  .ourteam-info{
+      color:#6941C6;
+      font-size: 18px;
+  }
+  .ourteam-description{
+      color: #667085;
+      font-size: 17px;
+  }

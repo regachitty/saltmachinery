@@ -1,0 +1,62 @@
+.video-gallery {
+    align-items: center !important;
+  }
+  
+  .video-item {
+    margin-bottom: 12px;
+    transition: all 350ms ease;
+    cursor: pointer;
+  }
+  
+  /* .video-item:hover {
+    transform: scale(0.98);
+  } */
+  
+  .video-container {
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%; /* Make video container full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .react-html5video {
+    width: 100% !important;
+    height: 50% !important; /* Set height to a fixed value */
+  }
+  
+  
+  .react-html5video-controls {
+    height: 5px;
+  }
+  
+  .react-html5video-button {
+    font-size: 1rem !important;
+  }
+  
+  .react-html5video-progress {
+    height: 8px !important;
+  }
+  
+  .react-html5video-progress-bar {
+    height: 100% !important;
+    background-color: #ff9800 !important;
+  }
+  
+  .react-html5video-volume-slider {
+    width: 100px !important;
+    height: 10px !important;
+  }
+  
+  .react-html5video-fullscreen-button {
+    font-size: 5rem !important;
+  }
+
+  @media (min-width:320px) and (max-width:768px){
+    .react-html5video {
+        padding-left: 20px !important;
+      }
+  }
+  .rh5v-DefaultPlayer_component {
+    background-color: transparent;
+ }
+  

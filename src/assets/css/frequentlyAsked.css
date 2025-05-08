@@ -1,0 +1,106 @@
+/* Default styles for larger screens */
+.fre-ask-text-style {
+    color: #153443;
+    font-weight: bold;
+}
+.fre-ask-sub-text {
+    color: #667085;
+    font-weight: bold;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.faq-hr {
+    width: 65%;
+  }
+.question-text-style{
+    color: #101828;
+     font-weight: bold;
+}
+.answer-text-style{
+ color: #667085;
+}
+@media (min-width:320px) and (max-width:390px){
+    .question-text-style{
+        font-size: 12px !important;
+    }
+    .answer-text-style{
+        text-align: justify;
+        font-size: 12px;
+    }
+}
+
+/* Media queries for responsiveness */
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .fre-ask-text-style {
+        font-size: 1.5rem;
+    }
+    .fre-ask-sub-text {
+        font-size: 1.2rem;
+    }
+    .faq-content-width {
+        width: 65%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991.98px) {
+    .fre-ask-text-style {
+        font-size: 1.3rem;
+    }
+    .fre-ask-sub-text {
+        font-size: 1rem;
+    }
+    .faq-content-width {
+        width: 75%;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+    .fre-ask-text-style {
+        font-size: 1.1rem;
+    }
+    .fre-ask-sub-text {
+        font-size: 0.9rem;
+    }
+    .faq-content-width {
+        width: 90%;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .fre-ask-text-style {
+        font-size: 1rem;
+    }
+    .fre-ask-sub-text {
+        font-size: 0.8rem;
+    }
+    .faq-content-width {
+        font-size: 12px;
+        width: 100%;
+        text-align: justify !important;
+        justify-content: center;
+    }
+    .icon-container {
+        justify-content: center;
+      }
+}
+.bi {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .bi:hover {
+    transform: scale(1.2);
+  }
+  
+  .question-container {
+    cursor: pointer;
+  }
+  

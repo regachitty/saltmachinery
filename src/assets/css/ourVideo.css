@@ -1,0 +1,13 @@
+    .ourvideo-para-text-style{
+        font-size: 18px;
+        line-height: 35px;
+    }
+    
+    @media (min-width:320px) and (max-width:768px) {
+       
+            .ourvideo-para-text-style {
+                font-size: 14px; /* Smaller text size for mobile */
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+    }

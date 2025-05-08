@@ -1,0 +1,93 @@
+.saltwashery-text-styles{
+    font-size: 70px;
+    color: rgba(21, 52, 67, 1);
+    font-weight: bold;
+    max-width: 80%;
+}
+
+.saltwashery-sub-text-style{
+    color: rgba(21, 52, 67, 1);
+    font-size: 18px;
+    max-width: 73%;
+    line-height: 30px;
+}
+
+.optimised-text-style{
+    color: rgba(21, 52, 67, 1);
+    font-size: 40px;
+    max-width: 80%;
+}
+
+.optimised-sub-edge-style {
+    color: #667085;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.saltwash-head-text-style {
+    color: rgba(21, 52, 67, 1);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.satwash-head-sub-text-style {
+    color: #667085;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.refinery-container {
+    overflow: hidden !important;  /* Hides both horizontal and vertical overflow */
+  }
+@media (min-width: 320px) and (max-width: 768px) {
+    .saltwashery-text-styles {
+        font-size: 35px;
+        max-width: 100%;
+    }
+    .saltwashery-sub-text-style {
+        max-width: 90%;
+        font-size: 12px;
+    }
+    .optimised-text-style {
+        color: rgba(21, 52, 67, 1);
+        font-size: 30px;
+        max-width: 100%;     
+    }
+    .optimised-sub-edge-style{
+        display: flex;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: justify;
+    }
+    .saltwash-head-text-style {
+        font-size: 18px;
+    }
+    .satwash-head-sub-text-style {
+        font-size: 16px;
+        line-height: 31px;
+        text-align: justify;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .saltwashery-text-styles {
+        font-size: 50px;
+        max-width: 90%;
+    }
+    .saltwashery-sub-text-style {
+        max-width: 80%;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1440px) {
+    .saltwashery-text-styles {
+        font-size: 40px;
+        max-width: 73%;
+    }
+    .saltwashery-sub-text-style {
+        max-width: 75%;
+        font-size: 16px;
+    }
+}

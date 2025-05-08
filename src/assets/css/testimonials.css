@@ -1,0 +1,265 @@
+.test-card1,
+.test-card2 {
+  border: 1px solid rgb(248, 246, 246) !important;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px #eff0f6 !important;
+  background-color: rgba(255, 255, 255, 1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonal-heading {
+  color: #153443;
+  font-size: 50px;
+}
+
+.cards1,
+.cards2 {
+  position: relative;
+  overflow: hidden;
+  animation-play-state: running;
+}
+
+.cards-slider1,
+.cards-slider2 {
+  display: flex;
+  animation: slide 20s linear infinite;
+}
+
+.testimonial-card1,
+.testimonial-card2 {
+  flex: 0 0 30%;
+  max-width: 30%;
+  padding: 0 10px;
+}
+
+.cards1 {
+  position: relative;
+}
+
+.cards1:before,
+.cards1:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.cards1:before {
+  left: 0;
+  /* background: linear-gradient(to left, rgba(255, 255, 255, 0), white); */
+}
+
+.cards1:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+
+.cards2 {
+  position: relative;
+}
+
+.cards2:before,
+.cards2:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.cards2:before {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.cards2:after {
+  left: 0;
+  /* background: linear-gradient(to left, rgba(255, 255, 255, 0), white); */
+}
+
+.testimonial-bg-cl {
+  background-color: #F7F7FB;
+}
+
+@keyframes slide1 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.cards-slider1 {
+  animation: slide 20s linear infinite;
+}
+
+.cards-slider2 {
+  animation: slide2 20s linear infinite;
+}
+
+.cards1:hover .cards-slider1,
+.cards2:hover .cards-slider2 {
+  animation-play-state: paused;
+}
+
+
+@media (max-width: 768px) {
+
+  .cards1,
+  .cards2 {
+    display: flex;
+    width: 100%;
+    padding: 0;
+  }
+
+  .cards-slider1,
+  .cards-slider2 {
+    display: flex !important;
+  }
+
+  .testimonial-card1,
+  .testimonial-card2 {
+    padding: 10px;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+
+  }
+
+  .cards1:before,
+  .cards1:after,
+  .cards2:before,
+  .cards2:after {
+    display: none !important;
+  }
+
+  .card-font-style {
+    font-size: 16px;
+  }
+
+  .card-body-style {
+    font-size: 12px;
+  }
+
+  .country-font-style {
+    font-size: 16px;
+  }
+
+  .test-card1.test-card2 {
+    padding: 50px !important;
+  }
+
+  .testimonal-heading {
+    font-size: 20px;
+  }
+}
+
+.country-font-style {
+  font-size: 18px;
+}
+
+/* Responsive styles for screens between 992px and 1024px */
+@media (min-width: 992px) and (max-width: 1024px) {
+  .testimonal-heading {
+    font-size: 36px;
+    /* Adjust heading font size */
+  }
+
+  .testimonial-card1,
+  .testimonial-card2 {
+    flex: 0 0 50%;
+    /* Display 2 cards in a row */
+    max-width: 50%;
+    padding: 15px;
+    /* Adjust padding for better spacing */
+  }
+
+  .test-card1,
+  .test-card2 {
+    border-radius: 6px;
+    padding: 25px !important;
+    box-shadow: 4px 4px 8px #ececec !important;
+  }
+
+  .card-font-style {
+    font-size: 16px;
+  }
+
+  .card-body-style {
+    font-size: 14px;
+  }
+
+  .country-font-style {
+    font-size: 14px;
+  }
+
+  .cards1:before,
+  .cards1:after,
+  .cards2:before,
+  .cards2:after {
+    width: 150px;
+  }
+}
+
+/* Base styles for screens between 1024px and 1440px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .testimonal-heading {
+    font-size: 40px;
+    /* Adjusted font size for headings */
+  }
+
+  .testimonial-card1,
+  .testimonial-card2 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+  }
+
+  .test-card1,
+  .test-card2 {
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    padding: 30px !important;
+    /* Padding adjustments for card content */
+    box-shadow: 6px 6px 10px #ececec !important;
+    /* Subtle shadow */
+  }
+
+  .card-font-style {
+    font-size: 18px;
+    /* Adjusted title font size */
+  }
+
+  .card-body-style {
+    font-size: 16px;
+    /* Adjusted body text font size */
+  }
+
+  .country-font-style {
+    font-size: 16px;
+    /* Adjusted country font size */
+  }
+
+  .cards1:before,
+  .cards1:after,
+  .cards2:before,
+  .cards2:after {
+    width: 200px;
+    /* Gradient overlay width for this screen range */
+  }
+}

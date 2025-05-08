@@ -1,0 +1,85 @@
+
+.over-flow-hidden{
+  overflow: hidden!important;
+}
+.contactcon-bg-cl  {
+    background-image: linear-gradient(#94ACD2, #2E5AA0);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .black-half-build-img {
+    margin-top:-150px;
+  }
+ 
+  .title-of-contact{
+    color: #FFFFFF;
+  }
+  .no1{
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-parag{
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .getTouch-btn{
+     color: #040F1F;
+     border: 1px solid white;
+     border-radius:25px;
+     text-decoration: none;
+     background-color: white;
+  }
+
+  .getTouch-btn:hover{
+    color: white;
+    background-color: #94ACD2;
+  }
+
+  .sub-of-contact{
+    font-size: 50px;
+    letter-spacing: 1px;
+  }
+
+  @media  (max-width:576px)
+  {
+    .sub-of-contact{
+      font-size: 22px!important;
+  }     
+  }
+@media (min-width:575px) and (max-width:768px) {
+    .title-of-contact {
+        padding-top: 32px;
+        font-size: 12px;
+    }
+    .contactcon-bg-cl {
+      height: auto; 
+      padding: 20px; 
+    }
+
+    .getTouch-btn {
+      font-size: 12px;
+      padding: 10px 20px; 
+    }
+    .sub-of-contact{
+        font-size: 25px!important;
+    }
+  }
+
+  @media (min-width:769px) and (max-width:992px) {
+    .sub-of-contact{
+      font-size: 25px;
+    }
+    
+  }
+  @media (min-width:993px) and (max-width:1400px) {
+    
+    .sub-of-contact{
+      font-size: 36px;
+    }
+  }
+
+  /* @media (max-width:768px){
+    .black-half-build-img{
+      max-width: 80% !important;
+    }
+  } */

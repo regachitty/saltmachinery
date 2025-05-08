@@ -1,0 +1,148 @@
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column; 
+}
+.navbar-nav .nav-item .nav-link.hover-styles:hover {
+ color:  #001c48 !important;
+ font-weight: 600;
+}
+
+.contact-calls:hover a.callsStyle,
+.contact-calls:hover img {
+color: #001c48 !important;
+font-weight: 600;
+filter: brightness(0) saturate(100%) invert(11%) sepia(92%) saturate(1000%) hue-rotate(180deg);
+}
+
+.contact-calls:hover img {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(92%) saturate(1000%) hue-rotate(180deg);
+}
+.over-flow-hidden{
+  overflow: hidden!important;
+} 
+
+.get-touch-btns {
+  border-radius: 23px;
+  background-color: #04A8DA;
+  color: #FFFFFF;
+  border: 0px solid #fff !important;
+  font-size: 15px;
+}
+.get-touch-btns:hover {
+  background-color: rgba(4, 168, 218, 0.5);
+  color: #ffffff;
+}
+
+.contact-calls a.callsStyle {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.language-dds {
+  border-radius: 23px;
+  background: rgba(4, 168, 218, 0.05);
+  border: 1px solid rgba(4, 168, 218, 0.5) !important;
+  color: #444b59;
+
+  font-size: 15px;
+}
+
+
+.india-flag-icon-style {
+  width: 23px !important;
+}
+
+.navbar-toggler{
+  border-radius: 25px !important;
+  border: 1px solid #ebe7e7 !important;
+  background-color: #fff !important;
+  z-index: 1;
+  margin: 10px!important;
+  color: white !important;
+}
+ 
+.navbar-toggler-icon {
+  color: black !important;
+  width: 23px !important;
+}
+
+@media(max-width:1100px) {
+  .nav-img2 img{
+    width: 100px!important;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .navbar-toggler-icon {
+    color: black !important;
+    width: 18px !important;
+  }
+  .get-touch-btn {
+    margin-top: 10px;
+  }
+
+  .contact-call {
+    margin-bottom: 10px;
+  }
+  .navbar-brand img{
+    width:130px;
+    height: auto;
+    display: flex;
+    padding: auto;
+  }
+ .nav-img2{
+  display: none !important;
+ }
+}
+
+
+@media (min-width: 993px) {
+  .nav-img{
+display: none;
+  }
+}
+.product-text-styles{
+ color: black !important;
+}
+
+.dropdown-container {
+  position: relative;
+}
+.dropdown-menu-custom {
+  min-width: 150px;
+  color: #547AB7 !important; 
+  border-radius: 5px;
+  text-decoration: none;
+}
+.dropdown-menu-custom .ant-dropdown-menu {
+  margin-top: 8px; 
+}
+.menu-text-style{
+  color: #547AB7 !important;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+.menu-text-style:hover{
+  color: black !important; 
+  font-weight:500;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+.gallery-video-file {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    padding: 0.8rem;
+  }
+  
+  .gallery-video-file,
+  .video {
+    /* -webkit-transition: all 350ms ease; */
+    /* transition: all 350ms ease; */
+    cursor: pointer;
+    margin-bottom: 12px;
+  }
+  
+  .gallery-video-file,
+  .video:hover {
+    /* transform: scale(0.98); */
+  }
+  
+  @media (max-width: 991px) {
+    .gallery-video-file {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery-video-file {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+      -webkit-column-width: 100%;
+      -moz-column-width: 100%;
+      column-width: 100%;
+    }
+  }
+  
+  .video-container-file {
+    /* border-radius: 10px; */
+    overflow: hidden;
+  }
+  
+  .model {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+    z-index: 999;
+  }
+  
+  .model .model-close-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .model .video-container-file {
+    width: auto;
+    max-width: 75%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+    line-height: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem 0 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .video-container-file video {
+    width: 130%;
+  }
+  
+  .react-html5video {
+    font-size: 1.5rem; 
+  }
+  
+  .react-html5video-controls {
+    height: 5px; /* Adjust the height */
+    font-size: 1rem; /* Adjust text size for controls */
+  }
+  
+ /* Increase the size of individual buttons */
+.react-html5video-button {
+    font-size: 1rem !important ; /* Make buttons like PlayPause larger */
+   /* Add spacing between buttons */
+  }
+  .react-html5video-progress {
+    height: 8px !important;
+  }
+  .react-html5video-progress-bar {
+    height: 100% !important; 
+    background-color: #ff9800 !important ; /* Change progress bar color (optional) */
+  }
+  .react-html5video-volume-slider {
+    width: 100px !important; /* Adjust the width of the volume slider */
+    height: 10px !important; /* Adjust the height */
+  }
+  .react-html5video-fullscreen-button {
+    font-size: 5rem !important; /* Increase fullscreen button size */
+  }
+
+  .rh5v-Overlay_inner{
+    border-radius: 28px !important;
+    background-color: rgb(234 226 226 / 70%) !important;
+  }
+
+   
