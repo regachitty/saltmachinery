@@ -11,6 +11,49 @@ import { Dropdown, Space, Modal } from "antd";
 import ContactPop from "./ContactPop.jsx";
 
 const WhiteNav = () => {
+  const expertiseMenu = (
+    <div className="custom-dropdown">
+      <a className="menu-text-style" href="/ourExpertise">
+        Plug In And Go
+      </a>
+      <a className="menu-text-style" href="/esg">
+        ESG (Sustainability)
+      </a>
+    </div>
+  );
+  const productsMenu = (
+    <div className="custom-dropdown">
+      <a className="menu-text-style" href="/refineryPage">
+        Mechanical Salt Refinery
+      </a>
+      <a className="menu-text-style" href="/purvaccumSalt">
+        Pure Vacuum Dried Salt Plant
+      </a>
+      <a className="menu-text-style" href="/saltWasheryPlant">
+        Salt Washery Plant
+      </a>
+      <a className="menu-text-style" href="/saltIodization">
+        Salt Iodization Plant
+      </a>
+      <a className="menu-text-style" href="/pharmaSaltPlant">
+        Pharma Salt Plant
+      </a>
+
+      <div className="submenu-wrapper">
+        <div className="menu-text-style submenu-title">
+          Industrial Salt Plant
+        </div>
+        <div className="submenu-content">
+          <a className="menu-text-style" href="/chlorAlkali">
+            Chlor Alkali
+          </a>
+          <a className="menu-text-style" href="/oilAndGas">
+            Oil and Gas
+          </a>
+        </div>
+      </div>
+    </div>
+  );
   const [isModalVisible, setIsModalVisible] = React.useState(false);
   const navigate = useNavigate();
   const showModal = () => {
@@ -27,99 +70,6 @@ const WhiteNav = () => {
   const handleGetInTouchClick = () => {
     navigate("/contactus");
   };
-  const items = [
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/refineryPage"
-        >
-          Mechanical Salt Refinery
-        </a>
-      ),
-      key: "0",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/purvaccumSalt"
-        >
-          Pure Vacuum Salt Refinery
-        </a>
-      ),
-      key: "1",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/saltWasheryPlant"
-        >
-          Salt Washery Refinery
-        </a>
-      ),
-      key: "2",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/saltIodization"
-        >
-          Salt Iodization Refinery
-        </a>
-      ),
-      key: "3",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/pharmaSaltPlant"
-        >
-          Pharma Salt Plant
-        </a>
-      ),
-      key: "4",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/doubleFortifiedSalt"
-        >
-          Double Fortified Salt
-        </a>
-      ),
-      key: "5",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/lowSodiumSaltPlant"
-        >
-          Low Sodium Salt Plant
-        </a>
-      ),
-      key: "6",
-    },
-  ];
 
   return (
     <>
@@ -160,19 +110,16 @@ const WhiteNav = () => {
               </li>
               <li className="nav-item dropdown-container">
                 <Dropdown
+                  overlay={productsMenu}
+                  trigger={["hover"]}
                   overlayClassName="dropdown-menu-custom"
-                  menu={{
-                    items,
-                  }}
-                  trigger={["click"]}
                 >
                   <a
                     onClick={(e) => e.preventDefault()}
                     className="nav-link hover-styles product-text-black product-text-styles text-lg-center text-start albert-sans "
                   >
                     <Space>
-                      Products
-                      <DownOutlined />
+                      Products <DownOutlined />
                     </Space>
                   </a>
                 </Dropdown>
@@ -193,6 +140,30 @@ const WhiteNav = () => {
                 >
                   Trading
                 </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link hover-styles active text-black  text-lg-center  text-start albert-sans "
+                  href="/blogs"
+                >
+                  Blogs
+                </a>
+              </li>
+              <li className="nav-item dropdown-container">
+                <Dropdown
+                  overlay={expertiseMenu}
+                  trigger={["hover"]}
+                  overlayClassName="dropdown-menu-custom"
+                >
+                  <a
+                    onClick={(e) => e.preventDefault()}
+                    className="nav-link hover-styles text-white product-text-styles text-lg-center text-start albert-sans font-size"
+                  >
+                    <Space>
+                      Our Expertise <DownOutlined />
+                    </Space>
+                  </a>
+                </Dropdown>
               </li>
             </ul>
             <a className="navbar-brand nav-img2 me-auto me-lg-none " href="/">

@@ -324,7 +324,7 @@ const RefineryPage = () => {
             <ProductSpecific />
           </div>
         </div>
-        <TrustedSection />
+
         <div className="pt-5 mb-lg-5 mb-3">
           <ProductSimplySlider />
         </div>

@@ -48,6 +48,7 @@ import ScrollStickyImage from "./Component/ScrollStickyImage.jsx";
 import Certified from "./Component/Certified.jsx";
 import { OurExpertise } from "./Pages/OurExpertise.jsx";
 import { Esg } from "./Pages/Esg.jsx";
+import { ChloarAlkali } from "./Pages/ChloarAlkali.jsx";
 
 // import MachinerySaltRefinery from './Pages/MachinerySaltRefinery.jsx';
 
@@ -103,6 +104,7 @@ function App() {
           <Route path="/certifedpictures" element={<Certified />} />
           <Route path="/ourExpertise" element={<OurExpertise />} />
           <Route path="/esg" element={<Esg />} />
+          <Route path="/chloarAlkali" element={<ChloarAlkali />} />
         </Routes>
       </BrowserRouter>
     </>

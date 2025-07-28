@@ -3,8 +3,6 @@ import saltRefineryImage from "../assets/images/saltRefineryImage.svg";
 import WhiteNav from "../CommonComponent/WhiteNav";
 import "../assets/css/machinerySaltRefinery.css";
 import ImageSlider from "../CommonComponent/ImageSlider";
-import ProductSpecific from "../CommonComponent/ProductSpecific";
-import TrustedSection from "../CommonComponent/TrustedSection";
 import ProductSimplySlider from "../CommonComponent/ProductSimplySlider";
 import ReadyToBuild from "../CommonComponent/ReadyToBuild";
 import FrequentlyAsked from "../CommonComponent/FrequentlyAsked";
@@ -285,12 +283,9 @@ const PharmaSaltPlant = () => {
               </div>
             )}
             <hr className="my-4 me-3" />
-
-            <ProductSpecific />
           </div>
         </div>
 
-        <TrustedSection />
         <div className="pt-5 mb-lg-5 mb-3">
           <ProductSimplySlider />
         </div>

@@ -10,7 +10,7 @@ const ProductSimplySlider = () => {
             Products
           </h6>
           <h1 className="display-3 product-heading text-uppercase fw-semibold text-lg-center text-center">
-            Simplyfying Salt <br /> production
+            Simplifying Salt <br /> production
           </h1>
         </div>
         <ProductSlider className="px-5" />

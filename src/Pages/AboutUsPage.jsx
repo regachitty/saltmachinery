@@ -6,8 +6,8 @@ import BannerOfAboutUs from "../Component/BannerOfAbout.jsx";
 import OurTeam from "../Component/OurTeam.jsx";
 import "../assets/css/outTeam.css";
 import member from "../assets/images/teamMemberPhoto.svg";
-import twittericongray from "../assets/images/twittericongray.svg";
-import browserIcongray from "../assets/images/browserIcongray.svg";
+// import twittericongray from "../assets/images/twittericongray.svg";
+// import browserIcongray from "../assets/images/browserIcongray.svg";
 import linkedinIcongray from "../assets/images/likedinIcongray.svg";
 import innovation from "../assets/images/innovation.svg";
 import sustainability from "../assets/images/sustainability.svg";
@@ -26,6 +26,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "../CommonComponent/Footer.jsx";
+import Certifedpictures from "../Component/Certified.jsx";
 
 const AboutUsPage = () => {
   const location = useLocation();
@@ -43,61 +44,62 @@ const AboutUsPage = () => {
         ?.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
+
   const teamdetail = [
     {
-      // image: member,
       title: "R. Balasubramanian",
       subTitle: "CEO",
       description:
-        "Leading innovation, excellence, and sustainable growth in salt processing. ",
+        "Leading innovation, excellence, and sustainable growth in salt processing.",
+      href: "https://www.linkedin.com/in/balasubramanian-shriram-62011929",
     },
     {
-      // image: member,
       title: "B. Sorna Devi",
       subTitle: "Chief Finance Officer",
       description:
         "Optimizing financial strategy, growth, and efficiency at Shriraam Engineering.",
+      href: "https://www.linkedin.com/in/sorna-devi-balasubramanian",
     },
     {
-      // image: member,
       title: "Ganesh Iyer",
       subTitle: "Director (PVD Turnkey Projects), Director Technical",
       description:
         "Driving innovation and technical excellence in salt processing.",
+      href: "https://www.linkedin.com/in/ganesh-iyer-a099746",
     },
     {
-      // image: member,
       title: "Lorenzo Locatelli-Rossi",
       subTitle: "Innovation and Marketing",
       description:
-        "Fostering creativity and leading strategic marketing initiatives. ",
+        "Fostering creativity and leading strategic marketing initiatives.",
+      href: "https://www.linkedin.com/in/lorenzo-locatelli-rossi-0aa422221",
     },
     {
-      // image: member,
       title: "Francois Rossier",
       subTitle: "Business Model and Finance",
       description:
         "Strategizing business models and optimizing financial growth.",
+      href: "https://www.linkedin.com/in/francois-rossier-senbumo",
     },
     {
-      // image: member,
       title: "Caetano Capitao",
       subTitle: "Director Business Development",
       description:
         "Steering business growth and strategic development initiatives.",
+      href: "https://www.linkedin.com/in/caetano-capitao-81044557",
     },
     {
-      // image: member,
       title: "Ragulan Sappanipillai",
       subTitle: "Director Business Development - Africa",
       description:
         "Leading business development and strategic growth across Africa.",
+      href: "https://www.linkedin.com/in/sragulan",
     },
     {
-      // image: member,
       title: "Vijay Tilden",
       subTitle: "General Manager",
-      description: "Leading operations with excellence and strategic vision. ",
+      description: "Leading operations with excellence and strategic vision.",
+      href: "https://www.linkedin.com/in/vijay-tilden-wilson-19a01523",
     },
   ];
 
@@ -110,19 +112,19 @@ const AboutUsPage = () => {
     },
     {
       valueImg: sustainability,
-      valuetitle: "Resilience",
+      valuetitle: "Care",
       valueDescription:
         "We embrace sustainable practices in both design and manufacturing to reduce environmental impact and promote energy efficiency.",
     },
     {
       valueImg: qualityIcon,
-      valuetitle: "Quality Excellence",
+      valuetitle: "Business Excellence",
       valueDescription:
         "We are committed to manufacturing durable, reliable, and high-performance machinery, backed by rigorous testing and quality control.",
     },
     {
       valueImg: integrityIcon,
-      valuetitle: "Integrity & Accountability",
+      valuetitle: "Integrity",
       valueDescription:
         "We uphold the highest ethical standards in all our business dealings, ensuring transparency, trust, and responsibility in every action.",
     },
@@ -134,7 +136,7 @@ const AboutUsPage = () => {
     },
     {
       valueImg: resultIcon,
-      valuetitle: "Result",
+      valuetitle: "Trust",
       valueDescription:
         "We consistently deliver measurable results by driving innovation, efficiency, and strategic solutions for business success.",
     },
@@ -239,15 +241,20 @@ const AboutUsPage = () => {
                         {teamMemberDetail.description}
                       </p>
                       <div className="social-icons mt-3 mb-5">
-                        <a href="#" className="me-3">
+                        {/* <a href="#" className="me-3">
                           <img src={twittericongray} alt="Twitter Icon" />
-                        </a>
-                        <a href="#" className="me-3">
+                        </a> */}
+                        <a
+                          href={teamMemberDetail.href}
+                          className="me-3"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <img src={linkedinIcongray} alt="LinkedIn Icon" />
                         </a>
-                        <a href="#">
+                        {/* <a href="#">
                           <img src={browserIcongray} alt="Browser Icon" />
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                   </div>
@@ -417,10 +424,14 @@ const AboutUsPage = () => {
             </div>
           </div>
         </div>
+        <div className="container mt-5 pt-5">
+          <Certifedpictures />
+        </div>
 
         <div className="mt-5 pt-5">
           <ContactCom />
         </div>
+
         <Footer />
       </div>
     </>

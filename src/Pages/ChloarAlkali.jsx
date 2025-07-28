@@ -1,8 +1,6 @@
-import WhiteNav from "../CommonComponent/WhiteNav";
 import React, { useState, useEffect } from "react";
 import saltRefineryImage from "../assets/images/saltRefineryImage.svg";
 import ImageSlider from "../CommonComponent/ImageSlider";
-
 
 import ProductSimplySlider from "../CommonComponent/ProductSimplySlider";
 import ReadyToBuild from "../CommonComponent/ReadyToBuild";
@@ -12,8 +10,9 @@ import "../assets/css/purevaccumsalt.css";
 import Footer from "../CommonComponent/Footer.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import WhiteNav from "../CommonComponent/WhiteNav.jsx";
 
-const PureVacuumSaltPlant = () => {
+export const ChloarAlkali = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -98,17 +97,14 @@ const PureVacuumSaltPlant = () => {
             data-aos-delay="500"
           >
             <h2 className="vaccum-text-styles albert-sans text-uppercase pb-4 text-md-start text-center px-4 px-lg-0">
-              Pure Vacuum Salt Plant (PVD)
+              Chlor Alkali
             </h2>
-            <p className="vaccum-sub-text-style albert-sans-400 ps-2 text-md-start text-center justify-content-center ">
-              Experience cutting-edge salt refining technology with our Pure
-              Vacuum Dried (PVD) Salt Plant, designed for industries requiring
-              ultra-pure, high-quality salt. This state-of-the-art system
-              employs advanced vacuum evaporation and crystallization techniques
-              to ensure optimal impurity removal and uniform quality. From brine
-              preparation to iodization and packaging, the PVD process
-              guarantees consistent results, making it ideal for applications in
-              textiles, food processing, and other demanding industries.
+            <p className="vaccum-sub-text-style albert-sans-400 ps-4 text-md-start text-center justify-content-center ">
+              Our Chlor-Alkali Salt Plants are engineered to produce high-purity
+              salt ideal for membrane-grade electrochemical processes. These
+              plants are designed with precision systems to minimize impurities
+              such as calcium, magnesium, and sulfates—ensuring consistent
+              performance and extended membrane life.
             </p>
           </div>
           <div
@@ -142,13 +138,12 @@ const PureVacuumSaltPlant = () => {
             data-aos-delay="500"
           >
             <h2 className="optimised-text-style fw-bold albert-sans pb-2">
-              Optimised Raw Salt Feeding System
+              Shriram's Chlor Alkali Salt Plants
             </h2>
             <p className="optimised-sub-edge-style albert-sans-400 mb-lg-2 mb-4">
-              Equipped with feed hoppers and raw salt conveyors, our system
-              ensures effective removal of debris such as stones, clay, and
-              ferrous particles through magnetic separators and manual picking
-              platforms.
+              Shriraam’s Chlor-Alkali salt plants enable chemical industries to
+              achieve sustainable, uninterrupted production with superior
+              process control.
             </p>
             <hr className="my-5 me-3" />
 
@@ -158,7 +153,7 @@ const PureVacuumSaltPlant = () => {
               onClick={() => toggleSection("rawProcessing")}
             >
               <h4 className="albert-sans pure-head-text-style my-4 my-lg-0">
-                Vacuum Evaporation Process
+                Highlights
               </h4>
               <i
                 className={`bi ${
@@ -172,12 +167,16 @@ const PureVacuumSaltPlant = () => {
             {openSections.rawProcessing && (
               <div className="col-12 pt-3">
                 <p className="albert-sans-400 pure-head-sub-text-style">
-                  The PVD process starts by dissolving raw salt in water to
-                  create a brine solution. This brine undergoes clarification,
-                  where impurities settle, and the clear brine is chemically
-                  treated to precipitate magnesium and calcium salts. The
-                  purified brine is then concentrated using advanced vacuum
-                  evaporation technology.
+                  Optimized for membrane cell technology
+                </p>
+                <p className="albert-sans-400 pure-head-sub-text-style">
+                  Low impurity levels for high operational efficiency
+                </p>
+                <p className="albert-sans-400 pure-head-sub-text-style">
+                  Energy-efficient refining processes
+                </p>
+                <p className="albert-sans-400 pure-head-sub-text-style">
+                  Fully automated and customizable designs
                 </p>
               </div>
             )}
@@ -188,9 +187,7 @@ const PureVacuumSaltPlant = () => {
               className="col-12 d-flex justify-content-between align-items-center mb-lg-0 mb-4"
               onClick={() => toggleSection("brineRecycling")}
             >
-              <h4 className="albert-sans pure-head-text-style">
-                Crystallization and Brine Recycling
-              </h4>
+              <h4 className="albert-sans pure-head-text-style">Applications</h4>
               <i
                 className={`bi ${
                   openSections.brineRecycling
@@ -203,108 +200,20 @@ const PureVacuumSaltPlant = () => {
             {openSections.brineRecycling && (
               <div className="col-12 pt-3">
                 <p className="albert-sans-400 raw-sub-text-style">
-                  Saturated brine is sent to the evaporation system, where
-                  crystallization occurs. The resulting salt slurry is recycled
-                  through a hydro-cyclone, achieving a 50–60% concentration.
-                  Excess brine is recycled for efficiency, minimizing waste and
-                  ensuring continuous operation.
+                  Soda ash (sodium carbonate) production
                 </p>
-              </div>
-            )}
-            <hr className="my-4 me-3" />
-            {/* Drying and Iodization */}
-            <div
-              className="col-12 d-flex justify-content-between align-items-center mb-lg-0 mb-4"
-              onClick={() => toggleSection("dryingandIodization")}
-            >
-              <h4 className="albert-sans raw-text-style">
-                Centrifugation and Drying
-              </h4>
-              <i
-                className={`bi ${
-                  openSections.dryingandIodization
-                    ? "bi-dash-circle"
-                    : "bi-plus-circle"
-                } pe-3`}
-                style={{ color: "#7F56D9", cursor: "pointer" }}
-              ></i>
-            </div>
-            {openSections.dryingandIodization && (
-              <div className="col-12 pt-3">
                 <p className="albert-sans-400 raw-sub-text-style">
-                  The concentrated slurry is centrifuged to separate moisture
-                  and create salt cakes with 4–5% residual moisture. These are
-                  conveyed to a fluidized bed dryer, where hot air ensures the
-                  salt achieves the perfect dryness for iodization and further
-                  processing.
+                  Caustic soda manufacturing
                 </p>
-              </div>
-            )}
-            <hr className="my-4 me-3" />
-            {/* Screening and Blending */}
-            <div
-              className="col-12 d-flex justify-content-between align-items-center mb-lg-0 mb-4"
-              onClick={() => toggleSection("screeningBlending")}
-            >
-              <h4 className="albert-sans raw-text-style">
-                Iodization and Sieving
-              </h4>
-              <i
-                className={`bi ${
-                  openSections.screeningBlending
-                    ? "bi-dash-circle"
-                    : "bi-plus-circle"
-                } pe-3`}
-                style={{ color: "#7F56D9", cursor: "pointer" }}
-              ></i>
-            </div>
-            {openSections.screeningBlending && (
-              <div className="col-12 pt-3">
                 <p className="albert-sans-400 raw-sub-text-style">
-                  In the dryer, the salt is iodized to meet nutritional
-                  standards, then cooled and passed through sieving systems to
-                  remove oversized particles. Undersized salt is processed back
-                  into the system, ensuring no material is wasted.
+                  Chlorine and hydrogen production
                 </p>
               </div>
             )}
             <hr className="my-4 me-3" />
-
-            {/* Packaging and Distribution */}
-            <div
-              className="col-12 d-flex justify-content-between align-items-center mb-lg-0 mb-4"
-              onClick={() => toggleSection("packagingDistribution")}
-            >
-              <h4 className="albert-sans raw-text-style">
-                Packaging and Storage
-              </h4>
-              <i
-                className={`bi ${
-                  openSections.packagingDistribution
-                    ? "bi-dash-circle"
-                    : "bi-plus-circle"
-                } pe-3`}
-                style={{ color: "#7F56D9", cursor: "pointer" }}
-              ></i>
-            </div>
-            {openSections.packagingDistribution && (
-              <div className="col-12 pt-3">
-                <p className="albert-sans-400 raw-sub-text-style">
-                  The refined salt is mixed with free-flowing agents for
-                  enhanced storage stability. It is then conveyed to automated
-                  packaging systems, offering flexibility in pack sizes,
-                  including 1 kg pouches or 50 kg industrial bags, ensuring
-                  ready-to-market quality.
-                </p>
-              </div>
-            )}
-            <hr className="my-4 me-3" />
-
-        
           </div>
         </div>
 
-     
         <div className="pt-5 mb-lg-5 mb-3">
           <ProductSimplySlider />
         </div>
@@ -322,5 +231,3 @@ const PureVacuumSaltPlant = () => {
     </>
   );
 };
-
-export default PureVacuumSaltPlant;

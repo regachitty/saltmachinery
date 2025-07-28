@@ -1,8 +1,8 @@
 import React from "react";
 import "../assets/css/outTeam.css";
 // import member from "../assets/images/teamMemberPhoto.svg";
-import twittericongray from "../assets/images/twittericongray.svg";
-import browserIcongray from "../assets/images/browserIcongray.svg";
+// import twittericongray from "../assets/images/twittericongray.svg";
+// import browserIcongray from "../assets/images/browserIcongray.svg";
 import linkedinIcongray from "../assets/images/likedinIcongray.svg";
 
 const OurTeam = () => {
@@ -73,15 +73,15 @@ const OurTeam = () => {
                     {teamMemberDetail.description}
                   </p>
                   <div className="social-icons mt-3 mb-4">
-                    <a href="#" className="me-3">
+                    {/* <a href="#" className="me-3">
                       <img src={twittericongray} alt="Twitter Icon" />
-                    </a>
+                    </a> */}
                     <a href="#" className="me-3">
                       <img src={linkedinIcongray} alt="LinkedIn Icon" />
                     </a>
-                    <a href="#">
+                    {/* <a href="#">
                       <img src={browserIcongray} alt="Browser Icon" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>

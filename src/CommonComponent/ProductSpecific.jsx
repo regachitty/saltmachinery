@@ -18,8 +18,10 @@ const ProductSpecific = () => {
           <div className="row mt-5 sky-bg-color mx-lg-0 mx-5">
             <div className="col-lg-6 col-md-6 col-12 d-flex flex-column align-items-center my-5">
               <img src={salt} alt="salt" className="img-fluid mb-4" />
-              <h4 className="pro-cards-head-style fw-bold text-center">NaCl</h4>
-              <p className="pro-cards-sub-style text-center">Above 99%</p>
+              <h4 className="pro-cards-head-style fw-bold text-center">
+                Sodium Chloride
+              </h4>
+              <p className="pro-cards-sub-style text-center">99%</p>
             </div>
             <div className="col-lg-6 col-md-6 col-12 d-flex flex-column align-items-center my-5">
               <img
@@ -28,17 +30,17 @@ const ProductSpecific = () => {
                 className="img-fluid mb-4"
               />
               <h4 className="pro-cards-head-style fw-bold text-center">
-                Soluble Matter
+                Sulfate ions
               </h4>
-              <p className="pro-cards-sub-style text-center">0.4%</p>
+              <p className="pro-cards-sub-style text-center">0.25%</p>
             </div>
             <hr className="w-75 mx-auto" />
             <div className="col-lg-6 col-md-6 col-12 d-flex flex-column align-items-center my-5">
               <img src={iodine} alt="iodine" className="img-fluid mb-4" />
               <h4 className="pro-cards-head-style fw-bold text-center">
-                Iodine Max.
+                Iodine
               </h4>
-              <p className="pro-cards-sub-style text-center">40-60 ppm</p>
+              <p className="pro-cards-sub-style text-center">15-45 ppm</p>
             </div>
             <div className="col-lg-6 col-md-6 col-12 d-flex flex-column align-items-center my-5">
               <img
@@ -47,19 +49,19 @@ const ProductSpecific = () => {
                 className="img-fluid mb-4"
               />
               <h4 className="pro-cards-head-style fw-bold text-center">
-                Moisture level
+                Calcium
               </h4>
               <p className="pro-cards-sub-style text-center dryer-style">
-                Max. 0.3% (At the bottom of the dryer 0.1% – 0.15%)
+                0.06%
               </p>
             </div>
             <hr className="w-75 mx-auto" />
             <div className="col-lg-6 col-md-6 col-12 d-flex flex-column align-items-center my-5">
               <img src={nowater} alt="nowater" className="img-fluid mb-4" />
               <h4 className="pro-cards-head-style fw-bold text-center insouble">
-                Insoluble Matter other than NaCl
+                Moisture
               </h4>
-              <p className="pro-cards-sub-style text-center">Above 99%</p>
+              <p className="pro-cards-sub-style text-center">1%</p>
             </div>
             <div className="col-lg-6 col-md-6 col-12 d-flex flex-column align-items-center my-5">
               <img src={particle} alt="particle" className="img-fluid mb-4" />
@@ -67,7 +69,26 @@ const ProductSpecific = () => {
                 Particle size distribution
               </h4>
               <p className="pro-cards-sub-style text-center buyer-style">
-                All less than 710 microns or as required by buyer
+                700 to 900 microns
+              </p>
+            </div>
+            <hr className="w-75 mx-auto" />
+            <div className="col-lg-6 col-md-6 col-12 d-flex flex-column align-items-center my-5">
+              <img src={particle} alt="particle" className="img-fluid mb-4" />
+              <h4 className="pro-cards-head-style fw-bold text-center">
+                Insoluble in water
+              </h4>
+              <p className="pro-cards-sub-style text-center buyer-style">
+                Max 0.1%
+              </p>
+            </div>
+            <div className="col-lg-6 col-md-6 col-12 d-flex flex-column align-items-center my-5">
+              <img src={particle} alt="particle" className="img-fluid mb-4" />
+              <h4 className="pro-cards-head-style fw-bold text-center">
+                Magnesium
+              </h4>
+              <p className="pro-cards-sub-style text-center buyer-style">
+                0.05%
               </p>
             </div>
             <div className="vertical-line "></div>

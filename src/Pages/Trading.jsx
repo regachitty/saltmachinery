@@ -131,7 +131,7 @@ const Trading = () => {
                 manufacturing needs.
               </p>
             </div>
-            <div className="col-lg-6 col-12 d-flex flex-column justify-content-center px-4 py-3">
+            {/* <div className="col-lg-6 col-12 d-flex flex-column justify-content-center px-4 py-3">
               <p className="h2 mb-3 font-weight-bold text-center text-lg-start albert-sans ">
                 PFs Premix
               </p>
@@ -148,7 +148,7 @@ const Trading = () => {
                 alt="smallimgtrading1"
                 className="img-fluid"
               />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="contactComponent px-3">

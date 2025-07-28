@@ -3,7 +3,7 @@ import saltRefineryImage from "../assets/images/saltRefineryImage.svg";
 import WhiteNav from "../CommonComponent/WhiteNav";
 import "../assets/css/machinerySaltRefinery.css";
 import ImageSlider from "../CommonComponent/ImageSlider";
-import ProductSpecific from "../CommonComponent/ProductSpecific";
+
 import TrustedSection from "../CommonComponent/TrustedSection";
 import ProductSimplySlider from "../CommonComponent/ProductSimplySlider";
 import ReadyToBuild from "../CommonComponent/ReadyToBuild";
@@ -206,8 +206,6 @@ const LowSodiumSaltPlant = () => {
                 </ul>
               </div>
             )}
-
-            <ProductSpecific />
           </div>
         </div>
 

@@ -19,9 +19,9 @@ import { Modal } from "antd";
 import Globe from "../CommonComponent/GlobeComponent.jsx";
 const Home = () => {
   const homeScores = [
-    { target: 50, duration: 1600, text: "Years of experience" },
-    { target: 400, duration: 1500, text: "Satisfied clients" },
-    { target: 500, duration: 2000, text: "Projects delivered" },
+    { target: 30, duration: 1600, text: "No. of countries" },
+    { target: 1100, duration: 1500, text: "No. of plants commissioned" },
+    { target: 6, duration: 2000, text: "Worldwide offices" },
   ];
 
   const [isModalVisible, setIsModalVisible] = React.useState(false);
@@ -58,7 +58,7 @@ const Home = () => {
             <div className="row ">
               <div className="col-lg-8 col-md-6 col-12 ps-md-5 mt-5 mt-lg-0 sub-banner-content d-flex align-items-md-start align-items-center ">
                 <h2 className="albert-sans banner-head-style text-white banner_title text-md-start text-center mb-md-3 mb-3">
-                  Engineering the Future of Salt Refining
+                  Re-Engineering the Future of Salt Refining
                 </h2>
                 <Link
                   className="quote-btn fs-15 d-flex justify-content-md-start justify-content-center px-md-4 px-3 py-md-2 py-2 mb-md-3 mb-3 albert-sans"
@@ -175,7 +175,7 @@ const Home = () => {
                   Products
                 </h6>
                 <h1 className="display-3 product-heading text-uppercase fw-semibold text-lg-start text-start ps-lg-5 ps-2">
-                  Simplyfying Salt <br /> production
+                  Simplifying Salt <br /> production
                 </h1>
               </div>
               <ProductSlider />

@@ -8,114 +8,60 @@ import blackDropIcon from "../assets/images/blackdropIcon.svg";
 import { Link } from "react-router-dom";
 import indiaIcon from "../assets/images/india-flag-icon.svg";
 import { DownOutlined } from "@ant-design/icons";
-import { Dropdown, Space, Modal } from "antd";
+import { Dropdown, Space } from "antd";
 
 const Navbar = () => {
-  // const location = useLocation();
-  // const isHome = location.pathname === "/";
+  const productsMenu = (
+    <div className="custom-dropdown">
+      <a className="menu-text-style" href="/refineryPage">
+        Mechanical Salt Refinery
+      </a>
+      <a className="menu-text-style" href="/purvaccumSalt">
+        Pure Vacuum Dried Salt Plant
+      </a>
+      <a className="menu-text-style" href="/saltWasheryPlant">
+        Salt Washery Plant
+      </a>
+      <a className="menu-text-style" href="/saltIodization">
+        Salt Iodization Plant
+      </a>
+      <a className="menu-text-style" href="/pharmaSaltPlant">
+        Pharma Salt Plant
+      </a>
 
-  const items = [
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/refineryPage"
-        >
-          Mechanical Salt Refinery
-        </a>
-      ),
-      key: "0",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/purvaccumSalt"
-        >
-          Pure Vacuum Salt Refinery
-        </a>
-      ),
-      key: "1",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/saltWasheryPlant"
-        >
-          Salt Washery Refinery
-        </a>
-      ),
-      key: "2",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/saltIodization"
-        >
-          Salt Iodization Refinery
-        </a>
-      ),
-      key: "3",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/pharmaSaltPlant"
-        >
-          Pharma Salt Plant
-        </a>
-      ),
-      key: "4",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/doubleFortifiedSalt"
-        >
-          Double Fortified Salt
-        </a>
-      ),
-      key: "5",
-    },
-    {
-      label: (
-        <a
-          className="menu-text-style albert-sans "
-          target="_blank"
-          rel="noopener noreferrer"
-          href="/lowSodiumSaltPlant"
-        >
-          Low Sodium Salt Plant
-        </a>
-      ),
-      key: "6",
-    },
-  ];
+      <div className="submenu-wrapper">
+        <div className="menu-text-style submenu-title">
+          Industrial Salt Plant
+        </div>
+        <div className="submenu-content">
+          <a className="menu-text-style" href="/chlorAlkali">
+            Chlor Alkali
+          </a>
+          <a className="menu-text-style" href="/oilAndGas">
+            Oil and Gas
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 
-  // const homeNav = isHome ? "home-nav" : "home-nav-blue";
+  // OUR EXPERTISE dropdown
+  const expertiseMenu = (
+    <div className="custom-dropdown">
+      <a className="menu-text-style" href="/ourExpertise">
+        Plug In And Go
+      </a>
+      <a className="menu-text-style" href="/esg">
+        ESG (Sustainability)
+      </a>
+    </div>
+  );
 
   return (
     <>
       <nav className="navbar navbar-sticky navbar-expand-lg navbar-light over-flow-hidden">
-        {/* <nav className={`navbar navbar-expand-lg navbar-light over-flow-hidden ${homeNav}`}> */}
         <div className="container-fluid">
-          <a className="navbar-brand nav-img me-auto me-lg-none " href="#home">
+          <a className="navbar-brand nav-img me-auto me-lg-none" href="#home">
             <img src={logo} alt="Brand Logo" />
           </a>
           <button
@@ -131,10 +77,10 @@ const Navbar = () => {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav me-auto ">
-              <li className="nav-item ">
+            <ul className="navbar-nav me-auto">
+              <li className="nav-item">
                 <a
-                  className="nav-link  hover-style active text-white  text-lg-center text-start albert-sans font-size "
+                  className="nav-link hover-style active text-white text-lg-center text-start albert-sans font-size"
                   href="/"
                 >
                   Home
@@ -142,7 +88,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className="nav-link hover-style active text-white text-lg-center   text-start albert-sans font-size"
+                  className="nav-link hover-style active text-white text-lg-center text-start albert-sans font-size"
                   href="/aboutus"
                 >
                   About Us
@@ -150,26 +96,23 @@ const Navbar = () => {
               </li>
               <li className="nav-item dropdown-container">
                 <Dropdown
+                  overlay={productsMenu}
+                  trigger={["hover"]}
                   overlayClassName="dropdown-menu-custom"
-                  menu={{
-                    items,
-                  }}
-                  trigger={["click"]}
                 >
                   <a
                     onClick={(e) => e.preventDefault()}
-                    className="nav-link hover-style text-white  product-text-style text-lg-center text-start albert-sans font-size "
+                    className="nav-link hover-style text-white product-text-style text-lg-center text-start albert-sans font-size"
                   >
                     <Space>
-                      Products
-                      <DownOutlined />
+                      Products <DownOutlined />
                     </Space>
                   </a>
                 </Dropdown>
               </li>
               <li className="nav-item">
                 <a
-                  className="nav-link  hover-style active text-white  text-lg-center   text-start albert-sans font-size"
+                  className="nav-link hover-style active text-white text-lg-center text-start albert-sans font-size"
                   href="/saltDesign"
                 >
                   Salt work Design
@@ -177,11 +120,35 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className="nav-link hover-style active text-white  text-lg-center   text-start albert-sans font-size"
+                  className="nav-link hover-style active text-white text-lg-center text-start albert-sans font-size"
                   href="/trading"
                 >
                   Trading
                 </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link hover-style active text-white text-lg-center text-start albert-sans font-size"
+                  href="/blogs"
+                >
+                  Blogs
+                </a>
+              </li>
+              <li className="nav-item dropdown-container">
+                <Dropdown
+                  overlay={expertiseMenu}
+                  trigger={["hover"]}
+                  overlayClassName="dropdown-menu-custom"
+                >
+                  <a
+                    onClick={(e) => e.preventDefault()}
+                    className="nav-link hover-style text-white product-text-style text-lg-center text-start albert-sans font-size"
+                  >
+                    <Space>
+                      Our Expertise <DownOutlined />
+                    </Space>
+                  </a>
+                </Dropdown>
               </li>
             </ul>
             <a
@@ -189,13 +156,12 @@ const Navbar = () => {
               href="#home"
             >
               <img src={logo} alt="Brand Logo" />
-              {/* <img src={isHome?logo:logoBlue} alt="Brand Logo"/> */}
             </a>
-            <div className=" d-lg-flex align-items-start align-items-lg-center ">
+            <div className="d-lg-flex align-items-start align-items-lg-center">
               <div className="dropdown pe-3">
                 <button
                   type="submit"
-                  className="language-dd text-black px-md-4 px-4 py-md-2 py-2  my-3 albert-sans font-size"
+                  className="language-dd text-black px-md-4 px-4 py-md-2 py-2 my-3 albert-sans font-size"
                 >
                   <i className="icon">
                     <img
@@ -218,7 +184,7 @@ const Navbar = () => {
               </div>
               <Link
                 to={"/contactUs"}
-                className="get-touch-btn   px-md-3 px-3 py-md-2 py-2 my-lg-0 my-3 fw-semibold albert-sans font-size"
+                className="get-touch-btn px-md-3 px-3 py-md-2 py-2 my-lg-0 my-3 fw-semibold albert-sans font-size"
               >
                 Get in Touch
               </Link>

@@ -21,6 +21,7 @@ import arrowicon from "../assets/images/ArrowRight.svg";
 import booth from "../assets/images/phone-booth-4398750-Photoroom 1.svg";
 import LogosSliders from "../CommonComponent/LogosSliders";
 import Footer from "../CommonComponent/Footer.jsx";
+import ContactUsImage from "../assets/images/contactUsImage.svg";
 const ContactUs = () => {
   const [phone, setPhone] = useState("");
   // const logos = [
@@ -79,12 +80,14 @@ const ContactUs = () => {
           </div>
 
           <div className="container">
-            <div className="row contact-pop-style px-4">
+            <div className="row contact-pop-style px-4 py-5">
               {/* Image Section */}
-              <div className="col-lg-6 col-md-6 col-12 mb-lg-0 mb-3 d-flex justify-content-center">
-                <div className="contactImgcontain1 p-3 booth-image">
-                  <img src={booth} alt="booth" className="img-fluid" />
-                </div>
+              <div className="col-lg-6 col-md-6 col-12 mb-lg-0 mb-3 d-flex justify-content-start hide-on-mobile">
+                <img
+                  src={ContactUsImage}
+                  alt="contactImage"
+                  className="img-fluid p-3"
+                />
               </div>
 
               {/* Form Section */}
@@ -92,7 +95,6 @@ const ContactUs = () => {
                 <h4 className="work-together-style text-uppercase text-md-start text-center pt-5">
                   Let’s work together.
                 </h4>
-
                 <p className="pop-para-style text-md-start text-center pb-2">
                   Got a project? Drop us a line if you want to work together on
                   something exciting. Or do you need our help? Feel free to
@@ -110,7 +112,6 @@ const ContactUs = () => {
                       placeholder="First Name"
                     />
                   </div>
-
                   {/* Last Name Input */}
                   <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="Email" className="form-label">
@@ -122,7 +123,6 @@ const ContactUs = () => {
                       placeholder="Email Address"
                     />
                   </div>
-
                   {/* Mobile Number Input */}
                   <div className="col-md-12 col-12 mb-3">
                     <label htmlFor="inputMobile" className="form-label">
@@ -141,7 +141,6 @@ const ContactUs = () => {
                       inputStyle={{ width: "100%" }}
                     />
                   </div>
-
                   {/* Message Textarea */}
                   <div className="col-md-12 col-12 mb-3">
                     <label
@@ -156,7 +155,6 @@ const ContactUs = () => {
                       rows="3"
                     ></textarea>
                   </div>
-
                   {/* Submit Button */}
                   <div className="col-md-12 col-12 mt-3 mb-4">
                     <button className="btn btn-primary w-100 text-center d-flex align-items-center justify-content-center">
