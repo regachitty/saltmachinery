@@ -1,0 +1,22 @@
+.certified-image {
+  max-width: 190px;
+  width: 100%;
+  margin: 10px;
+}
+.certified-small-img {
+  max-width: 190px;
+  max-height: 150px;
+  margin: 10px;
+  object-fit: contain;
+}
+.certified-small-imgs{
+max-width: 120px;
+  max-height: 130px;
+  margin: 10px;
+  object-fit: contain;
+}
+.small-heading {
+  font-size: 30px; /* or try 12px, adjust as needed */
+  font-weight: 700; /* optional */
+}
+

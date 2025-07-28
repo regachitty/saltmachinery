@@ -181,10 +181,10 @@
 }
 
 /* Ensure all child elements do not cause horizontal overflow */
-.about-us-container img {
+/* .about-us-container img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 @media (min-width: 769px) and (max-width: 992px) {
   .salt-process-para-text{

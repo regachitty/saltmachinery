@@ -240,6 +240,19 @@ hr {
     margin-bottom: -317px;
   }
 }
+/* contactUs.css */
+
+/* Add this class to the image container */
+.hide-on-mobile {
+  display: block !important; /* Default display */
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important; /* Hide on mobile devices */
+  }
+}
+
 
 
 

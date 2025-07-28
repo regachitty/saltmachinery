@@ -1,0 +1,46 @@
+.runing-text {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.runing-text-style {
+  display: inline-block;
+  animation: slideInRightToLeft 20s linear infinite;
+  white-space: nowrap;
+  padding: 10px;
+  font-size: 200px;
+  color: #153443; 
+}
+
+.runing-text-style.transparent {
+  color: transparent !important;
+  -webkit-text-stroke: 2px hsla(200, 52%, 17%, 0.18) !important; 
+}
+
+@keyframes slideInRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width:320px) and (max-width:768px) {
+  
+  .runing-text-style {
+      font-size: 90px !important;
+  }
+ 
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+ 
+  .running-text {
+      font-size: 150px !important;
+  }
+  
+
+}
+

@@ -45,6 +45,10 @@ import DoubleFortifiedSalt from "./Pages/DoubleFortifiedSalt.jsx";
 import LowSodiumSaltPlant from "./Pages/LowSodiumSaltPlant.jsx";
 import GlobeComponent from "./CommonComponent/GlobeComponent.jsx";
 import ScrollStickyImage from "./Component/ScrollStickyImage.jsx";
+import Certified from "./Component/Certified.jsx";
+import { OurExpertise } from "./Pages/OurExpertise.jsx";
+import { Esg } from "./Pages/Esg.jsx";
+
 // import MachinerySaltRefinery from './Pages/MachinerySaltRefinery.jsx';
 
 function App() {
@@ -96,6 +100,9 @@ function App() {
           <Route path="/lowSodiumSaltPlant" element={<LowSodiumSaltPlant />} />
           <Route path="/globeComponent" element={<GlobeComponent />} />
           <Route path="/scrollSticky" element={<ScrollStickyImage />} />
+          <Route path="/certifedpictures" element={<Certified />} />
+          <Route path="/ourExpertise" element={<OurExpertise />} />
+          <Route path="/esg" element={<Esg />} />
         </Routes>
       </BrowserRouter>
     </>
