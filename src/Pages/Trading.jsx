@@ -1,9 +1,9 @@
 import React from "react";
 import WhiteNav from "../CommonComponent/WhiteNav";
 import member from "../assets/images/tradingimage1.svg";
-import smallimgtrading1 from "../assets/images/smallimgtrading1.svg";
-import tradingimage2 from "../assets/images/tradingimage2.svg";
-import tradingimage3 from "../assets/images/tradingimage3.svg";
+import smallimgtrading1 from "../assets/images/tradingimage2.svg";
+import tradingimage2 from "../assets/images/tradingimage3.svg";
+import tradingimage3 from "../assets/images/tradingimage4.svg";
 import buildImg1 from "../assets/images/black-build-img1.svg";
 import Footer from "../CommonComponent/Footer.jsx";
 const Trading = () => {

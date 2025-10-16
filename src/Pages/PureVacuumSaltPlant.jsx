@@ -1,8 +1,7 @@
 import WhiteNav from "../CommonComponent/WhiteNav";
 import React, { useState, useEffect } from "react";
-import saltRefineryImage from "../assets/images/saltRefineryImage.svg";
+import saltRefineryImage from "../assets/images/purevacumproduct1.svg";
 import ImageSlider from "../CommonComponent/ImageSlider";
-
 
 import ProductSimplySlider from "../CommonComponent/ProductSimplySlider";
 import ReadyToBuild from "../CommonComponent/ReadyToBuild";
@@ -299,12 +298,9 @@ const PureVacuumSaltPlant = () => {
               </div>
             )}
             <hr className="my-4 me-3" />
-
-        
           </div>
         </div>
 
-     
         <div className="pt-5 mb-lg-5 mb-3">
           <ProductSimplySlider />
         </div>

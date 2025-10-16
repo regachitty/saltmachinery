@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import ContactPop from "../CommonComponent/ContactPop.jsx";
 import { Modal } from "antd";
 import Globe from "../CommonComponent/GlobeComponent.jsx";
+import EChart from "../Component/Map.jsx";
 const Home = () => {
   const homeScores = [
     { target: 30, duration: 1600, text: "No. of countries" },
@@ -301,10 +302,10 @@ const Home = () => {
             <div className="py-lg-5">
               <Logoslider />
             </div>
-            {/* <Map /> */}
-            <div className="background-color-globe mb-0">
+
+            {/* <div className="background-color-globe mb-0">
               <Globe />
-            </div>
+            </div> */}
             <div className="background-color-contact">
               <ContactCom />
             </div>

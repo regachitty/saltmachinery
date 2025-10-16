@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import saltRefineryImage from "../assets/images/saltRefineryImage.svg";
+import saltRefineryImage from "../assets/images/saltwashnaryproduct1.svg";
 import ImageSlider from "../CommonComponent/ImageSlider";
 
 import ProductSimplySlider from "../CommonComponent/ProductSimplySlider";

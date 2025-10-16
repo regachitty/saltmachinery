@@ -1,6 +1,6 @@
 import "../assets/css/AboutUsPage.css";
 import WhiteNav from "../CommonComponent/WhiteNav";
-import aboutUsImg1 from "../assets/images/aboutUsimg1.svg";
+import aboutUsImg1 from "../assets/images/aboutimage1.svg";
 import ScoreComponent from "../Component/ScoreComponent.jsx";
 import BannerOfAboutUs from "../Component/BannerOfAbout.jsx";
 import OurTeam from "../Component/OurTeam.jsx";
@@ -19,9 +19,10 @@ import ContactCom from "../Component/ContactComponent.jsx";
 import AboutUsSlider from "../CommonComponent/LogosSliders.jsx";
 import twoMember from "../assets/images/abouttwoMemberImage.svg";
 import sidearrow from "../assets/images/sidearrow.svg";
-import strengthimg from "../assets/images/ourstrengthImage.svg";
-import SaltImageinAbou from "../assets/images/SaltImageinAbou.svg";
-import WaterImageinAbou from "../assets/images/WaterImageinAbou.svg";
+import strengthimg from "../assets/images/aboutimage4.svg";
+
+import SaltImageinAbou from "../assets/images/aboutimage2.svg";
+import WaterImageinAbou from "../assets/images/aboutimage3.svg";
 import React from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";

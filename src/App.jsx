@@ -49,6 +49,7 @@ import Certified from "./Component/Certified.jsx";
 import { OurExpertise } from "./Pages/OurExpertise.jsx";
 import { Esg } from "./Pages/Esg.jsx";
 import { ChloarAlkali } from "./Pages/ChloarAlkali.jsx";
+import EChart from "./Component/Echart";
 
 // import MachinerySaltRefinery from './Pages/MachinerySaltRefinery.jsx';
 
@@ -76,6 +77,7 @@ function App() {
           <Route path="/ourvideo" element={<OurVideoPage />} />
           <Route path="/videoFile" element={<VideoFile />} />
           <Route path="/singleVideoFile" element={<SingleVideo />} />
+          <Route path="/eChart" element={<EChart />} />
           {/*<Route path="/salt-work-design" element={<SaltWorkDesign />} /> */}
           <Route path="/saltDesign" element={<SaltDesign />} />
           <Route path="/trading" element={<Trading />} />

@@ -1,7 +1,7 @@
 import React from "react";
 import WhiteNav from "../CommonComponent/WhiteNav.jsx";
-import member from "../assets/images/saltWorkDesignImg1.svg";
-import saltdesign2 from "../assets/images/saltWorkDesignimg2.svg";
+import member from "../assets/images/saltworkdesignimage1.svg";
+import saltdesign2 from "../assets/images/saltworkdesignimage2.svg";
 import "../assets/css/saltworkDesign.css";
 import buildImg1 from "../assets/images/black-build-img1.svg";
 import Footer from "../CommonComponent/Footer.jsx";
@@ -78,8 +78,12 @@ const SaltDesign = () => {
             </p>
           </div>
 
-          <div className="col-lg-12  col-12 mt-5">
-            <img src={saltdesign2} alt="aboutUsImg1" className="img-fluid" />
+          <div className="col-lg-12  col-12 mt-5 ">
+            <img
+              src={saltdesign2}
+              alt="aboutUsImg1"
+              className="img-fluid px-4"
+            />
           </div>
           <div className="col-12 col-md-9 col-lg-9 text-center d-flex justify-content-center mx-auto mt-5 mb-5">
             <p className="saltworkdesign-para-text-style text-center mx-3">

@@ -1,6 +1,6 @@
 import React from "react";
 import WhiteNav from "../CommonComponent/WhiteNav";
-import member from "../assets/images/saltWorkDesignImg1.svg";
+import member from "../assets/images/saltworkdesignimage1.svg";
 import "../assets/css/saltworkDesign.css";
 import Footer from "../CommonComponent/Footer";
 import smallimgtrading1 from "../assets/images/smallimgtrading1.svg";
