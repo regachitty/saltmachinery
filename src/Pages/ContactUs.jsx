@@ -28,10 +28,9 @@ const ContactUs = () => {
   const form = useRef();
 
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
     phone: "",
-    subject: "",
     message: "",
   });
 
@@ -40,7 +39,7 @@ const ContactUs = () => {
 
   const validateForm = () => {
     let newErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.fullName.trim()) newErrors.fullName = "Name is required";
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -79,10 +78,9 @@ const ContactUs = () => {
         (result) => {
           alert("✅ Your message has been sent successfully!");
           setFormData({
-            name: "",
+            fullName: "",
             email: "",
             phone: "",
-            subject: "",
             message: "",
           });
           setErrors({});
@@ -173,45 +171,29 @@ const ContactUs = () => {
                   something exciting. Or do you need our help? Feel free to
                   contact us.
                 </p>
-                <div className="row justify-content-center">
+                <div className="row ">
                   <form ref={form} onSubmit={sendEmail}>
                     {/* First Name Input */}
-                    <div className="col-md-6 col-12 mb-3">
-                      <label htmlFor="FirstName" className="form-label">
-                        First Name
+                    <div className="col mb-3 ">
+                      <label htmlFor="FullName" className="form-label">
+                        Full Name
                       </label>
                       <input
                         type="text"
                         className="form-control contact-pop"
-                        placeholder="First Name"
-                        value={formData.firstName}
+                        placeholder="Full Name"
+                        value={formData.fullName}
                         onChange={handleChange}
                       />
                       {errors.firstname && (
                         <div className="invalid-feedback">
-                          {errors.firstname}
+                          {errors.fullName}
                         </div>
                       )}
                     </div>
-                    <div className="col-md-6 col-12 mb-3">
-                      <label htmlFor="FirstName" className="form-label">
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control contact-pop"
-                        placeholder="Last Name"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                      />
-                      {errors.lastname && (
-                        <div className="invalid-feedback">
-                          {errors.lastname}
-                        </div>
-                      )}
-                    </div>
+
                     {/* Last Name Input */}
-                    <div className="col-md-6 col-12 mb-3">
+                    <div className="col mb-3 ">
                       <label htmlFor="Email" className="form-label">
                         Email Address
                       </label>
