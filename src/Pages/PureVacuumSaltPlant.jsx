@@ -11,7 +11,10 @@ import "../assets/css/purevaccumsalt.css";
 import Footer from "../CommonComponent/Footer.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import purevacum1 from "../assets/images/purevacumsaltproductimage.svg";
+import purevacum2 from "../assets/images/purevacumsaltproductimage.svg";
+// import saltRefineryImage1 from "../assets/images/purevacumproductimage1.svg";
+const purevacumimages = [purevacum1, purevacum2];
 const PureVacuumSaltPlant = () => {
   useEffect(() => {
     AOS.init({
@@ -132,7 +135,7 @@ const PureVacuumSaltPlant = () => {
             data-aos-duration="1500"
             data-aos-delay="500"
           >
-            <ImageSlider />
+            <ImageSlider images={purevacumimages} />
           </div>
           <div
             className="col-lg-6 p-3 p-lg-4"

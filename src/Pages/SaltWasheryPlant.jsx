@@ -9,8 +9,11 @@ import StillHaveQuestion from "../CommonComponent/StillHaveQuestion";
 import "../assets/css/saltWashery.css";
 import WhiteNav from "../CommonComponent/WhiteNav";
 import Footer from "../CommonComponent/Footer.jsx";
+import saltWasheryImage1 from "../assets/images/defaultproductimage1.svg";
+import saltWasheryImage2 from "../assets/images/defaultproductimage1.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+const saltWasheryImages = [saltWasheryImage1, saltWasheryImage2];
 const SaltWasheryPlant = () => {
   useEffect(() => {
     AOS.init({
@@ -133,7 +136,7 @@ const SaltWasheryPlant = () => {
             data-aos-duration="1500"
             data-aos-delay="500"
           >
-            <ImageSlider />
+            <ImageSlider images={saltWasheryImages} />
           </div>
           <div
             className="col-lg-6 p-3 p-lg-4"

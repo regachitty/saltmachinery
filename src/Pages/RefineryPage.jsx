@@ -10,10 +10,11 @@ import ReadyToBuild from "../CommonComponent/ReadyToBuild";
 import FrequentlyAsked from "../CommonComponent/FrequentlyAsked";
 import StillHaveQuestion from "../CommonComponent/StillHaveQuestion";
 import Footer from "../CommonComponent/Footer.jsx";
+import saltRefineryImage1 from "../assets/images/refinaryproductimage.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import contactusimg from "../assets/images/conntactusimg.svg";
-
+const refineryImages = [saltRefineryImage1, saltRefineryImage1];
 const RefineryPage = () => {
   useEffect(() => {
     AOS.init({
@@ -153,7 +154,7 @@ const RefineryPage = () => {
 
         <div className="row mt-5 p-3">
           <div className="col-lg-6 col-12 p-3 p-lg-4 sticky-slider">
-            <ImageSlider />
+            <ImageSlider images={refineryImages} />
           </div>
 
           <div className="col-lg-6 p-3 p-lg-4">

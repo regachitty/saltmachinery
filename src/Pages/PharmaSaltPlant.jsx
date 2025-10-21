@@ -8,6 +8,9 @@ import ReadyToBuild from "../CommonComponent/ReadyToBuild";
 import FrequentlyAsked from "../CommonComponent/FrequentlyAsked";
 import StillHaveQuestion from "../CommonComponent/StillHaveQuestion";
 import Footer from "../CommonComponent/Footer.jsx";
+import saltpharma1 from "../assets/images/saltplantiproductimage.svg";
+import saltpharma2 from "../assets/images/saltplantiproductimage.svg";
+const pharmasaltimages = [saltpharma1, saltpharma2];
 import AOS from "aos";
 import "aos/dist/aos.css";
 const PharmaSaltPlant = () => {
@@ -142,7 +145,7 @@ const PharmaSaltPlant = () => {
             data-aos-duration="1500"
             data-aos-delay="500"
           >
-            <ImageSlider />
+            <ImageSlider images={pharmasaltimages} />
           </div>
           <div
             className="col-lg-6 p-3 p-lg-4"

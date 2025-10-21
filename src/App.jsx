@@ -50,6 +50,7 @@ import { OurExpertise } from "./Pages/OurExpertise.jsx";
 import { Esg } from "./Pages/Esg.jsx";
 import { ChloarAlkali } from "./Pages/ChloarAlkali.jsx";
 import EChart from "./Component/Echart";
+import OilAndGas from "./Pages/OilAndGas.jsx";
 
 // import MachinerySaltRefinery from './Pages/MachinerySaltRefinery.jsx';
 
@@ -107,6 +108,7 @@ function App() {
           <Route path="/ourExpertise" element={<OurExpertise />} />
           <Route path="/esg" element={<Esg />} />
           <Route path="/chloarAlkali" element={<ChloarAlkali />} />
+          <Route path="/oilAndGas" element={<OilAndGas />} />
         </Routes>
       </BrowserRouter>
     </>

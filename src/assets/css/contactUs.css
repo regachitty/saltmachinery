@@ -2,6 +2,16 @@
   font-size: 12px !important;
 }
 
+ .formoverlaydisplay {
+  position: absolute;
+  transform: translate(-10%, -10%,-10%);
+  background: white; /* or rgba(255,255,255,0.95) for transparency */
+  z-index: 10;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+}
+
 .email-styles {
   font-size: 12px !important;
 }

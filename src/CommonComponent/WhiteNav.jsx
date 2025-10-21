@@ -44,7 +44,7 @@ const WhiteNav = () => {
           Industrial Salt Plant
         </div>
         <div className="submenu-content">
-          <a className="menu-text-style" href="/chlorAlkali">
+          <a className="menu-text-style" href="/chloarAlkali">
             Chlor Alkali
           </a>
           <a className="menu-text-style" href="/oilAndGas">

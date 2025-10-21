@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../assets/css/contactUs.css";
 import saltImg from "../assets/images/saltMachinesImg.svg";
 import emailicon from "../assets/images/email-img.svg";
@@ -22,7 +22,79 @@ import booth from "../assets/images/phone-booth-4398750-Photoroom 1.svg";
 import LogosSliders from "../CommonComponent/LogosSliders";
 import Footer from "../CommonComponent/Footer.jsx";
 import ContactUsImage from "../assets/images/contactUsImage.svg";
+import emailjs from "@emailjs/browser";
+
 const ContactUs = () => {
+  const form = useRef();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const validateForm = () => {
+    let newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+    else if (!/^[0-9]{10}$/.test(formData.phone)) {
+      newErrors.phone = "Enter a valid 10-digit phone number";
+    }
+
+    if (!formData.message.trim()) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_1q48n1b", // ✅ your EmailJS service ID
+        "template_gspznua", // ✅ your EmailJS template ID
+        form.current,
+        "Bp4KK-eBqRaxmXStb" // ✅ your EmailJS public key
+      )
+      .then(
+        (result) => {
+          alert("✅ Your message has been sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+          });
+          setErrors({});
+        },
+        (error) => {
+          console.error("Email sending failed:", error.text);
+          alert("❌ Failed to send message. Please try again later.");
+        }
+      )
+      .finally(() => setLoading(false));
+  };
+
   const [phone, setPhone] = useState("");
   // const logos = [
   //     clientLogo1,
@@ -82,16 +154,17 @@ const ContactUs = () => {
           <div className="container">
             <div className="row contact-pop-style px-4 py-5">
               {/* Image Section */}
-              <div className="col-lg-6 col-md-6 col-12 mb-lg-0 mb-3 d-flex justify-content-start hide-on-mobile">
+              <div className="col-lg-12 col-md-6 col-12 mb-lg-0 mb-3 d-flex justify-content-start hide-on-mobile">
                 <img
                   src={ContactUsImage}
                   alt="contactImage"
-                  className="img-fluid p-3"
+                  className="img-fluid p-3  w-100"
+                  style={{ height: "auto", objectFit: "cover" }}
                 />
               </div>
 
               {/* Form Section */}
-              <div className="col-lg-5 col-md-5 col-12 d-flex flex-column justify-content-center form-background my-lg-0 my-3 pt-lg-1 pt-3 pb-3 px-lg-5 px-3 ms-lg-5 ms-0">
+              <div className="col-lg-5 col-md-5 col-12 d-flex flex-column justify-content-center form-background my-lg-0 my-3 pt-lg-1 pt-3 pb-3 px-lg-5 px-3 ms-lg-5 ms-0  formoverlaydisplay">
                 <h4 className="work-together-style text-uppercase text-md-start text-center pt-5">
                   Let’s work together.
                 </h4>
@@ -101,110 +174,113 @@ const ContactUs = () => {
                   contact us.
                 </p>
                 <div className="row justify-content-center">
-                  {/* First Name Input */}
-                  <div className="col-md-6 col-12 mb-3">
-                    <label htmlFor="FirstName" className="form-label">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control contact-pop"
-                      placeholder="First Name"
-                    />
-                  </div>
-                  {/* Last Name Input */}
-                  <div className="col-md-6 col-12 mb-3">
-                    <label htmlFor="Email" className="form-label">
-                      Email Address
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control contact-pop"
-                      placeholder="Email Address"
-                    />
-                  </div>
-                  {/* Mobile Number Input */}
-                  <div className="col-md-12 col-12 mb-3">
-                    <label htmlFor="inputMobile" className="form-label">
-                      Mobile Number
-                    </label>
-                    <PhoneInput
-                      country={"in"} // Default country is India
-                      value={phone}
-                      onChange={(phone) => setPhone(phone)}
-                      inputProps={{
-                        name: "phone",
-                        required: true,
-                        autoFocus: true,
-                      }}
-                      containerStyle={{ width: "100%" }}
-                      inputStyle={{ width: "100%" }}
-                    />
-                  </div>
-                  {/* Message Textarea */}
-                  <div className="col-md-12 col-12 mb-3">
-                    <label
-                      htmlFor="exampleFormControlTextarea1"
-                      className="form-label"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      className="form-control contact-pop"
-                      id="exampleFormControlTextarea1"
-                      rows="3"
-                    ></textarea>
-                  </div>
-                  {/* Submit Button */}
-                  <div className="col-md-12 col-12 mt-3 mb-4">
-                    <button className="btn btn-primary w-100 text-center d-flex align-items-center justify-content-center">
-                      Request a quote
-                      <img
-                        src={arrowicon}
-                        alt="arrow"
-                        className="ml-2"
-                        style={{ width: "16px", marginLeft: "8px" }}
+                  <form ref={form} onSubmit={sendEmail}>
+                    {/* First Name Input */}
+                    <div className="col-md-6 col-12 mb-3">
+                      <label htmlFor="FirstName" className="form-label">
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control contact-pop"
+                        placeholder="First Name"
+                        value={formData.firstName}
+                        onChange={handleChange}
                       />
-                    </button>
-                  </div>
+                      {errors.firstname && (
+                        <div className="invalid-feedback">
+                          {errors.firstname}
+                        </div>
+                      )}
+                    </div>
+                    <div className="col-md-6 col-12 mb-3">
+                      <label htmlFor="FirstName" className="form-label">
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control contact-pop"
+                        placeholder="Last Name"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                      />
+                      {errors.lastname && (
+                        <div className="invalid-feedback">
+                          {errors.lastname}
+                        </div>
+                      )}
+                    </div>
+                    {/* Last Name Input */}
+                    <div className="col-md-6 col-12 mb-3">
+                      <label htmlFor="Email" className="form-label">
+                        Email Address
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control contact-pop"
+                        placeholder="Email Address"
+                        value={formData.email}
+                        onChange={handleChange}
+                      />
+                      {errors.email && (
+                        <div className="invalid-feedback">{errors.email}</div>
+                      )}
+                    </div>
+                    {/* Mobile Number Input */}
+                    <div className="col-md-12 col-12 mb-3">
+                      <label htmlFor="inputMobile" className="form-label">
+                        Mobile Number
+                      </label>
+                      <PhoneInput
+                        country={"in"} // Default country is India
+                        value={formData.phone}
+                        onChange={(phone) => setPhone(phone)}
+                        inputProps={{
+                          name: "phone",
+                          required: true,
+                          autoFocus: true,
+                        }}
+                        containerStyle={{ width: "100%" }}
+                        inputStyle={{ width: "100%" }}
+                      />
+                    </div>
+                    {/* Message Textarea */}
+                    <div className="col-md-12 col-12 mb-3">
+                      <label
+                        htmlFor="exampleFormControlTextarea1"
+                        className="form-label"
+                      >
+                        Message
+                      </label>
+                      <textarea
+                        onChange={handleChange}
+                        value={formData.message}
+                        className="form-control contact-pop"
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                      ></textarea>
+                      {errors.message && (
+                        <div className="invalid-feedback">{errors.message}</div>
+                      )}
+                    </div>
+                    {/* Submit Button */}
+                    <div className="col-md-12 col-12 mt-3 mb-4">
+                      <button className="btn btn-primary w-100 text-center d-flex align-items-center justify-content-center">
+                        <img
+                          src={arrowicon}
+                          alt="arrow"
+                          className="ml-2"
+                          style={{ width: "16px", marginLeft: "8px" }}
+                          disabled={loading}
+                        />
+                        {loading ? "Sending..." : " Request a quote"}
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-
-          <div className="col-lg-6 col-12 my-2 d-flex justify-content-center">
-            <div className="contactImgcontain2 p-3">
-              <img
-                src={contactImage2}
-                alt="contactImg1"
-                className="img-fluid"
-              />
-            </div>
-          </div>
-
-          <div className="col-lg-6 col-12 my-2 d-flex justify-content-center">
-            <div className="contactImgcontain2 p-3">
-              <img
-                src={contactimage1}
-                alt="contactImg2"
-                className="img-fluid"
-              />
-            </div>
-          </div>
-
-          <hr className="hr-line-contactUs" />
-          {/* <div className="logos">
-                        <div className="logo-slider">
-                            {logos.concat(logos).map((logo, index) => (
-                                <div className="logo-with-lines1" key={index}>
-                                    <img src={logo} alt={`logoclient${index + 1}`} />
-                                    <div className="vertical-lines"></div>
-                                </div>
-                            ))}
-                        </div>
-                    </div> */}
-          <LogosSliders />
-          <hr className="hr-line-contactUs" />
         </div>
       </div>
       <div className="mt-3">

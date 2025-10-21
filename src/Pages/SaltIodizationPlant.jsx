@@ -11,6 +11,9 @@ import StillHaveQuestion from "../CommonComponent/StillHaveQuestion";
 import Footer from "../CommonComponent/Footer.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import saltIodizatioimage1 from "../assets/images/saltizodationproductimage1.svg";
+import saltIodizatioimage2 from "../assets/images/saltizodationproductimage1.svg";
+const saltIodizationImages = [saltIodizatioimage1, saltIodizatioimage2];
 const SaltIodizationPlant = () => {
   useEffect(() => {
     AOS.init({
@@ -136,7 +139,7 @@ const SaltIodizationPlant = () => {
             data-aos-duration="1500"
             data-aos-delay="500"
           >
-            <ImageSlider />
+            <ImageSlider images={saltIodizationImages} />
           </div>
           <div
             className="col-lg-6 p-3 p-lg-4"

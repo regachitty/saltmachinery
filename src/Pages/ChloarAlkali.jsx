@@ -11,6 +11,9 @@ import Footer from "../CommonComponent/Footer.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import WhiteNav from "../CommonComponent/WhiteNav.jsx";
+import chloarAlkali1 from "../assets/images/saltizodationproductimage1.svg";
+import chloarAlkali2 from "../assets/images/saltizodationproductimage1.svg";
+const saltIodizationImages = [chloarAlkali1, chloarAlkali2];
 
 export const ChloarAlkali = () => {
   useEffect(() => {
@@ -129,7 +132,7 @@ export const ChloarAlkali = () => {
             data-aos-duration="1500"
             data-aos-delay="500"
           >
-            <ImageSlider />
+            <ImageSlider images={saltIodizationImages} />
           </div>
           <div
             className="col-lg-6 p-3 p-lg-4"
