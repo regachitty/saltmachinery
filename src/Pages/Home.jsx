@@ -18,6 +18,7 @@ import ContactPop from "../CommonComponent/ContactPop.jsx";
 import { Modal } from "antd";
 import Globe from "../CommonComponent/GlobeComponent.jsx";
 import EChart from "../Component/Map.jsx";
+import Mapdemo from "../Component/Mapdemo.jsx";
 const Home = () => {
   const homeScores = [
     { target: 30, duration: 1600, text: "No. of countries" },
@@ -294,7 +295,7 @@ const Home = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> 
             <div className="gallery mt-5">
               <Gallery />
             </div>
@@ -302,7 +303,7 @@ const Home = () => {
             <div className="py-lg-5">
               <Logoslider />
             </div>
-
+            <Mapdemo />
             {/* <div className="background-color-globe mb-0">
               <Globe />
             </div> */}

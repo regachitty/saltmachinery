@@ -1,27 +1,10 @@
 import React, { useState, useRef } from "react";
 import "../assets/css/contactUs.css";
-import saltImg from "../assets/images/saltMachinesImg.svg";
-import emailicon from "../assets/images/email-img.svg";
-// import clientLogo1 from "../assets/images/clientlogo1.svg";
-// import clientLogo2 from "../assets/images/clientlogo2.svg";
-// import clientLogo3 from "../assets/images/clientlogo3.svg";
-// import clientLogo4 from "../assets/images/clientlogo4.svg";
-// import clientLogo5 from "../assets/images/clientlogo5.svg";
-// import clientLogo6 from "../assets/images/clientlogo6.svg";
-// import clientLogo7 from "../assets/images/clientLogo7.svg";
-
-import contactImage2 from "../assets/images/contactimage1.svg";
-import contactimage1 from "../assets/images/contactSecImg2.svg";
-import contacticonimg1 from "../assets/images/contactIconImg1.svg";
-import contacticonimg2 from "../assets/images/conatctIconImg2.svg";
-import conatctImg3 from "../assets/images/conntactusimg.svg";
 import WhiteNav from "../CommonComponent/WhiteNav";
 import PhoneInput from "react-phone-input-2";
-import arrowicon from "../assets/images/ArrowRight.svg";
-import booth from "../assets/images/phone-booth-4398750-Photoroom 1.svg";
-import LogosSliders from "../CommonComponent/LogosSliders";
 import Footer from "../CommonComponent/Footer.jsx";
 import ContactUsImage from "../assets/images/contactUsImage.svg";
+import arrowicon from "../assets/images/ArrowRight.svg";
 import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
@@ -45,11 +28,12 @@ const ContactUs = () => {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Invalid email format";
     }
-    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
-    else if (!/^[0-9]{10}$/.test(formData.phone)) {
-      newErrors.phone = "Enter a valid 10-digit phone number";
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^[0-9+\-\s()]{5,30}$/.test(formData.phone)) {
+      newErrors.phone =
+        "Enter a valid phone number (5-30 characters, digits, +, -, (), spaces allowed)";
     }
-
     if (!formData.message.trim()) newErrors.message = "Message is required";
 
     setErrors(newErrors);
@@ -58,6 +42,10 @@ const ContactUs = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phone: value });
   };
 
   const sendEmail = (e) => {
@@ -69,10 +57,10 @@ const ContactUs = () => {
 
     emailjs
       .sendForm(
-        "service_1q48n1b", // ✅ your EmailJS service ID
-        "template_gspznua", // ✅ your EmailJS template ID
+        "service_bui6cxf",
+        "template_3nkdeqr",
         form.current,
-        "Bp4KK-eBqRaxmXStb" // ✅ your EmailJS public key
+        "j0ZYBw2nraPLfCMAv"
       )
       .then(
         (result) => {
@@ -93,16 +81,6 @@ const ContactUs = () => {
       .finally(() => setLoading(false));
   };
 
-  const [phone, setPhone] = useState("");
-  // const logos = [
-  //     clientLogo1,
-  //     clientLogo2,
-  //     clientLogo3,
-  //     clientLogo4,
-  //     clientLogo5,
-  //     clientLogo6,
-  //     clientLogo7,
-  // ];
   return (
     <>
       <WhiteNav />
@@ -156,13 +134,13 @@ const ContactUs = () => {
                 <img
                   src={ContactUsImage}
                   alt="contactImage"
-                  className="img-fluid p-3  w-100"
+                  className="img-fluid p-3 w-100"
                   style={{ height: "auto", objectFit: "cover" }}
                 />
               </div>
 
               {/* Form Section */}
-              <div className="col-lg-5 col-md-5 col-12 d-flex flex-column justify-content-center form-background my-lg-0 my-3 pt-lg-1 pt-3 pb-3 px-lg-5 px-3 ms-lg-5 ms-0  formoverlaydisplay">
+              <div className="col-lg-5 col-md-5 col-12 d-flex flex-column justify-content-center form-background my-lg-0 my-3 pt-lg-1 pt-3 pb-3 px-lg-5 px-3 ms-lg-5 ms-0 formoverlaydisplay">
                 <h4 className="work-together-style text-uppercase text-md-start text-center pt-5">
                   Let’s work together.
                 </h4>
@@ -171,103 +149,113 @@ const ContactUs = () => {
                   something exciting. Or do you need our help? Feel free to
                   contact us.
                 </p>
-                <div className="row ">
-                  <form ref={form} onSubmit={sendEmail}>
-                    {/* First Name Input */}
-                    <div className="col mb-3 ">
-                      <label htmlFor="FullName" className="form-label">
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control contact-pop"
-                        placeholder="Full Name"
-                        value={formData.fullName}
-                        onChange={handleChange}
-                      />
-                      {errors.firstname && (
-                        <div className="invalid-feedback">
-                          {errors.fullName}
-                        </div>
-                      )}
-                    </div>
+                <form ref={form} onSubmit={sendEmail}>
+                  {/* Full Name */}
+                  <div className="mb-3">
+                    <label htmlFor="FullName" className="form-label">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control contact-pop"
+                      placeholder="Full Name"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                    />
+                    {errors.fullName && (
+                      <div className="invalid-feedback d-block">
+                        {errors.fullName}
+                      </div>
+                    )}
+                  </div>
 
-                    {/* Last Name Input */}
-                    <div className="col mb-3 ">
-                      <label htmlFor="Email" className="form-label">
-                        Email Address
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control contact-pop"
-                        placeholder="Email Address"
-                        value={formData.email}
-                        onChange={handleChange}
+                  {/* Email */}
+                  <div className="mb-3">
+                    <label htmlFor="Email" className="form-label">
+                      Email Address
+                    </label>
+                    <input
+                      type="text"
+                      name="email"
+                      className="form-control contact-pop"
+                      placeholder="Email Address"
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                    {errors.email && (
+                      <div className="invalid-feedback d-block">
+                        {errors.email}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Phone */}
+                  <div className="mb-3">
+                    <label htmlFor="inputMobile" className="form-label">
+                      Mobile Number
+                    </label>
+                    <PhoneInput
+                      country="in"
+                      value={formData.phone}
+                      onChange={handlePhoneChange}
+                      inputProps={{
+                        name: "phone",
+                        required: true,
+                        autoFocus: true,
+                      }}
+                      containerStyle={{ width: "100%" }}
+                      inputStyle={{ width: "100%" }}
+                    />
+                    {errors.phone && (
+                      <div className="invalid-feedback d-block">
+                        {errors.phone}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Message */}
+                  <div className="mb-3">
+                    <label htmlFor="Message" className="form-label">
+                      Message
+                    </label>
+                    <textarea
+                      className="form-control contact-pop"
+                      placeholder="Message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows="3"
+                    />
+                    {errors.message && (
+                      <div className="invalid-feedback d-block">
+                        {errors.message}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className="mb-4">
+                    <button
+                      type="submit"
+                      className="btn btn-primary w-100 d-flex align-items-center justify-content-center"
+                      disabled={loading}
+                    >
+                      {loading ? "Sending..." : "Request a quote"}
+                      <img
+                        src={arrowicon}
+                        alt="arrow"
+                        style={{ width: "16px", marginLeft: "8px" }}
                       />
-                      {errors.email && (
-                        <div className="invalid-feedback">{errors.email}</div>
-                      )}
-                    </div>
-                    {/* Mobile Number Input */}
-                    <div className="col-md-12 col-12 mb-3">
-                      <label htmlFor="inputMobile" className="form-label">
-                        Mobile Number
-                      </label>
-                      <PhoneInput
-                        country={"in"} // Default country is India
-                        value={formData.phone}
-                        onChange={(phone) => setPhone(phone)}
-                        inputProps={{
-                          name: "phone",
-                          required: true,
-                          autoFocus: true,
-                        }}
-                        containerStyle={{ width: "100%" }}
-                        inputStyle={{ width: "100%" }}
-                      />
-                    </div>
-                    {/* Message Textarea */}
-                    <div className="col-md-12 col-12 mb-3">
-                      <label
-                        htmlFor="exampleFormControlTextarea1"
-                        className="form-label"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        onChange={handleChange}
-                        value={formData.message}
-                        className="form-control contact-pop"
-                        id="exampleFormControlTextarea1"
-                        rows="3"
-                      ></textarea>
-                      {errors.message && (
-                        <div className="invalid-feedback">{errors.message}</div>
-                      )}
-                    </div>
-                    {/* Submit Button */}
-                    <div className="col-md-12 col-12 mt-3 mb-4">
-                      <button className="btn btn-primary w-100 text-center d-flex align-items-center justify-content-center">
-                        <img
-                          src={arrowicon}
-                          alt="arrow"
-                          className="ml-2"
-                          style={{ width: "16px", marginLeft: "8px" }}
-                          disabled={loading}
-                        />
-                        {loading ? "Sending..." : " Request a quote"}
-                      </button>
-                    </div>
-                  </form>
-                </div>
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-3">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 };

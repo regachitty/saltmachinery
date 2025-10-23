@@ -158,7 +158,7 @@ const Navbar = () => {
               <img src={logo} alt="Brand Logo" />
             </a>
             <div className="d-lg-flex align-items-start align-items-lg-center">
-              <div className="dropdown pe-3">
+              {/* <div className="dropdown pe-3">
                 <button
                   type="submit"
                   className="language-dd text-black px-md-4 px-4 py-md-2 py-2 my-3 albert-sans font-size"
@@ -175,7 +175,7 @@ const Navbar = () => {
                     <img src={blackDropIcon} className="img-fluid" />
                   </span>
                 </button>
-              </div>
+              </div> */}
               <div className="contact-call pe-3">
                 <img src={callIcon} alt="Call Icon" className="me-2" />
                 <Link to="tel:9003099999" className="callStyle albert-sans">
